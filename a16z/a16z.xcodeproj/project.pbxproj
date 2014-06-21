@@ -18,7 +18,7 @@
 		DD97799B19563FFC00B2504D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD97799A19563FFC00B2504D /* Images.xcassets */; };
 		DD9779BE195642FC00B2504D /* MCDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9779BD195642FC00B2504D /* MCDiscoverViewController.m */; };
 		DD9779C11956439200B2504D /* MCProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9779C01956439200B2504D /* MCProfileViewController.m */; };
-		DD9779C4195643CC00B2504D /* MCSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9779C3195643CC00B2504D /* MCSettingsViewController.m */; };
+		DD9779C7195645C200B2504D /* MCMatchesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9779C6195645C200B2504D /* MCMatchesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +41,8 @@
 		DD9779BD195642FC00B2504D /* MCDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCDiscoverViewController.m; path = Classes/Controllers/MCDiscoverViewController.m; sourceTree = "<group>"; };
 		DD9779BF1956439200B2504D /* MCProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCProfileViewController.h; path = Classes/Controllers/MCProfileViewController.h; sourceTree = "<group>"; };
 		DD9779C01956439200B2504D /* MCProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCProfileViewController.m; path = Classes/Controllers/MCProfileViewController.m; sourceTree = "<group>"; };
-		DD9779C2195643CC00B2504D /* MCSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCSettingsViewController.h; path = Classes/Controllers/MCSettingsViewController.h; sourceTree = "<group>"; };
-		DD9779C3195643CC00B2504D /* MCSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCSettingsViewController.m; path = Classes/Controllers/MCSettingsViewController.m; sourceTree = "<group>"; };
+		DD9779C5195645C200B2504D /* MCMatchesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCMatchesViewController.h; path = Classes/Controllers/MCMatchesViewController.h; sourceTree = "<group>"; };
+		DD9779C6195645C200B2504D /* MCMatchesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCMatchesViewController.m; path = Classes/Controllers/MCMatchesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,10 +150,10 @@
 				DD9779BD195642FC00B2504D /* MCDiscoverViewController.m */,
 				DD9779BF1956439200B2504D /* MCProfileViewController.h */,
 				DD9779C01956439200B2504D /* MCProfileViewController.m */,
-				DD9779C2195643CC00B2504D /* MCSettingsViewController.h */,
-				DD9779C3195643CC00B2504D /* MCSettingsViewController.m */,
 				934281CE195644BF0037454E /* MCLoginViewController.h */,
 				934281CF195644BF0037454E /* MCLoginViewController.m */,
+				DD9779C5195645C200B2504D /* MCMatchesViewController.h */,
+				DD9779C6195645C200B2504D /* MCMatchesViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -233,8 +233,8 @@
 				DD9779C11956439200B2504D /* MCProfileViewController.m in Sources */,
 				DD97799919563FFC00B2504D /* MCAppDelegate.m in Sources */,
 				DD97799519563FFC00B2504D /* main.m in Sources */,
-				DD9779C4195643CC00B2504D /* MCSettingsViewController.m in Sources */,
 				934281D1195644BF0037454E /* MCLoginViewController.m in Sources */,
+				DD9779C7195645C200B2504D /* MCMatchesViewController.m in Sources */,
 				DD9779BE195642FC00B2504D /* MCDiscoverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

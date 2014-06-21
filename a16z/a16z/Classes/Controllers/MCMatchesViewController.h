@@ -1,5 +1,5 @@
 //
-//  MCSettingsViewController.h
+//  MCMatchesViewController.h
 //  a16z
 //
 //  Created by Comyar Zaheri on 6/21/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MCSettingsViewController : UIViewController
+@interface MCMatchesViewController : UIViewController
 
 @end
