@@ -12,8 +12,11 @@
 		DD97798D19563FFC00B2504D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97798C19563FFC00B2504D /* UIKit.framework */; };
 		DD97799319563FFC00B2504D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD97799119563FFC00B2504D /* InfoPlist.strings */; };
 		DD97799519563FFC00B2504D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD97799419563FFC00B2504D /* main.m */; };
-		DD97799919563FFC00B2504D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD97799819563FFC00B2504D /* AppDelegate.m */; };
+		DD97799919563FFC00B2504D /* MCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD97799819563FFC00B2504D /* MCAppDelegate.m */; };
 		DD97799B19563FFC00B2504D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD97799A19563FFC00B2504D /* Images.xcassets */; };
+		DD9779BE195642FC00B2504D /* MCDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9779BD195642FC00B2504D /* MCDiscoverViewController.m */; };
+		DD9779C11956439200B2504D /* MCProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9779C01956439200B2504D /* MCProfileViewController.m */; };
+		DD9779C4195643CC00B2504D /* MCSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9779C3195643CC00B2504D /* MCSettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,10 +28,16 @@
 		DD97799219563FFC00B2504D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DD97799419563FFC00B2504D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DD97799619563FFC00B2504D /* a16z-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "a16z-Prefix.pch"; sourceTree = "<group>"; };
-		DD97799719563FFC00B2504D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		DD97799819563FFC00B2504D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DD97799719563FFC00B2504D /* MCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCAppDelegate.h; sourceTree = "<group>"; };
+		DD97799819563FFC00B2504D /* MCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCAppDelegate.m; sourceTree = "<group>"; };
 		DD97799A19563FFC00B2504D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DD9779A119563FFC00B2504D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DD9779BC195642FC00B2504D /* MCDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCDiscoverViewController.h; path = Classes/Controllers/MCDiscoverViewController.h; sourceTree = "<group>"; };
+		DD9779BD195642FC00B2504D /* MCDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCDiscoverViewController.m; path = Classes/Controllers/MCDiscoverViewController.m; sourceTree = "<group>"; };
+		DD9779BF1956439200B2504D /* MCProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCProfileViewController.h; path = Classes/Controllers/MCProfileViewController.h; sourceTree = "<group>"; };
+		DD9779C01956439200B2504D /* MCProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCProfileViewController.m; path = Classes/Controllers/MCProfileViewController.m; sourceTree = "<group>"; };
+		DD9779C2195643CC00B2504D /* MCSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCSettingsViewController.h; path = Classes/Controllers/MCSettingsViewController.h; sourceTree = "<group>"; };
+		DD9779C3195643CC00B2504D /* MCSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCSettingsViewController.m; path = Classes/Controllers/MCSettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +106,8 @@
 		DD9779B71956402400B2504D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				DD97799719563FFC00B2504D /* AppDelegate.h */,
-				DD97799819563FFC00B2504D /* AppDelegate.m */,
+				DD97799719563FFC00B2504D /* MCAppDelegate.h */,
+				DD97799819563FFC00B2504D /* MCAppDelegate.m */,
 				DD9779BA1956403000B2504D /* Controllers */,
 				DD9779B91956402C00B2504D /* Views */,
 				DD9779B81956402800B2504D /* Models */,
@@ -123,6 +132,12 @@
 		DD9779BA1956403000B2504D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DD9779BC195642FC00B2504D /* MCDiscoverViewController.h */,
+				DD9779BD195642FC00B2504D /* MCDiscoverViewController.m */,
+				DD9779BF1956439200B2504D /* MCProfileViewController.h */,
+				DD9779C01956439200B2504D /* MCProfileViewController.m */,
+				DD9779C2195643CC00B2504D /* MCSettingsViewController.h */,
+				DD9779C3195643CC00B2504D /* MCSettingsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -198,8 +213,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD97799919563FFC00B2504D /* AppDelegate.m in Sources */,
+				DD9779C11956439200B2504D /* MCProfileViewController.m in Sources */,
+				DD97799919563FFC00B2504D /* MCAppDelegate.m in Sources */,
 				DD97799519563FFC00B2504D /* main.m in Sources */,
+				DD9779C4195643CC00B2504D /* MCSettingsViewController.m in Sources */,
+				DD9779BE195642FC00B2504D /* MCDiscoverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

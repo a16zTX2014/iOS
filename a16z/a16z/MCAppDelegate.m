@@ -6,23 +6,31 @@
 //  Copyright (c) 2014 Comyar Zaheri. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "MCAppDelegate.h"
+#import "MCDiscoverViewController.h"
+#import "MCProfileViewController.h"
+#import "MCSettingsViewController.h"
 
 
-@interface AppDelegate ()
+@interface MCAppDelegate ()
 
 @property (nonatomic) UITabBarController *tabBarController;
 
 @end
 
 
-@implementation AppDelegate
+@implementation MCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     self.tabBarController = [UITabBarController new];
+    self.tabBarController.viewControllers = @[[MCDiscoverViewController new],
+                                              [MCProfileViewController new],
+                                              [MCSettingsViewController new]];
+    
+    self.tabBarController.selectedIndex = 0;
     
     self.window.rootViewController = self.tabBarController;
     self.window.backgroundColor = [UIColor whiteColor];

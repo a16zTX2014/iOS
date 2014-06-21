@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  MCDiscoverViewController.h
 //  a16z
 //
 //  Created by Comyar Zaheri on 6/21/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface MCDiscoverViewController : UIViewController
 
 @end
