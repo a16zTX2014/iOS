@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		934281D1195644BF0037454E /* MCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 934281CF195644BF0037454E /* MCLoginViewController.m */; };
+		934281D2195644BF0037454E /* MCLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 934281D0195644BF0037454E /* MCLoginViewController.xib */; };
 		DD97798919563FFC00B2504D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97798819563FFC00B2504D /* Foundation.framework */; };
 		DD97798B19563FFC00B2504D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97798A19563FFC00B2504D /* CoreGraphics.framework */; };
 		DD97798D19563FFC00B2504D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97798C19563FFC00B2504D /* UIKit.framework */; };
@@ -20,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		934281CE195644BF0037454E /* MCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCLoginViewController.h; path = Classes/Controllers/MCLoginViewController.h; sourceTree = "<group>"; };
+		934281CF195644BF0037454E /* MCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCLoginViewController.m; path = Classes/Controllers/MCLoginViewController.m; sourceTree = "<group>"; };
+		934281D0195644BF0037454E /* MCLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MCLoginViewController.xib; path = Classes/Controllers/MCLoginViewController.xib; sourceTree = "<group>"; };
 		DD97798519563FFC00B2504D /* a16z.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = a16z.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD97798819563FFC00B2504D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DD97798A19563FFC00B2504D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -54,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		934281D3195644D70037454E /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				934281D0195644BF0037454E /* MCLoginViewController.xib */,
+			);
+			name = xib;
+			sourceTree = "<group>";
+		};
 		DD97797C19563FFC00B2504D = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +119,7 @@
 		DD9779B71956402400B2504D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				934281D3195644D70037454E /* xib */,
 				DD97799719563FFC00B2504D /* MCAppDelegate.h */,
 				DD97799819563FFC00B2504D /* MCAppDelegate.m */,
 				DD9779BA1956403000B2504D /* Controllers */,
@@ -138,6 +152,8 @@
 				DD9779C01956439200B2504D /* MCProfileViewController.m */,
 				DD9779C2195643CC00B2504D /* MCSettingsViewController.h */,
 				DD9779C3195643CC00B2504D /* MCSettingsViewController.m */,
+				934281CE195644BF0037454E /* MCLoginViewController.h */,
+				934281CF195644BF0037454E /* MCLoginViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -202,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD97799319563FFC00B2504D /* InfoPlist.strings in Resources */,
+				934281D2195644BF0037454E /* MCLoginViewController.xib in Resources */,
 				DD97799B19563FFC00B2504D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +234,7 @@
 				DD97799919563FFC00B2504D /* MCAppDelegate.m in Sources */,
 				DD97799519563FFC00B2504D /* main.m in Sources */,
 				DD9779C4195643CC00B2504D /* MCSettingsViewController.m in Sources */,
+				934281D1195644BF0037454E /* MCLoginViewController.m in Sources */,
 				DD9779BE195642FC00B2504D /* MCDiscoverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
