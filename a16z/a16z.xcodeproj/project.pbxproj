@@ -19,6 +19,7 @@
 		DD9779BE195642FC00B2504D /* MCDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9779BD195642FC00B2504D /* MCDiscoverViewController.m */; };
 		DD9779C11956439200B2504D /* MCProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9779C01956439200B2504D /* MCProfileViewController.m */; };
 		DD9779C7195645C200B2504D /* MCMatchesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9779C6195645C200B2504D /* MCMatchesViewController.m */; };
+		DD9779C91956467A00B2504D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9779C81956467A00B2504D /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		DD9779C01956439200B2504D /* MCProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCProfileViewController.m; path = Classes/Controllers/MCProfileViewController.m; sourceTree = "<group>"; };
 		DD9779C5195645C200B2504D /* MCMatchesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCMatchesViewController.h; path = Classes/Controllers/MCMatchesViewController.h; sourceTree = "<group>"; };
 		DD9779C6195645C200B2504D /* MCMatchesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCMatchesViewController.m; path = Classes/Controllers/MCMatchesViewController.m; sourceTree = "<group>"; };
+		DD9779C81956467A00B2504D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			files = (
 				DD97798B19563FFC00B2504D /* CoreGraphics.framework in Frameworks */,
 				DD97798D19563FFC00B2504D /* UIKit.framework in Frameworks */,
+				DD9779C91956467A00B2504D /* Parse.framework in Frameworks */,
 				DD97798919563FFC00B2504D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +90,7 @@
 		DD97798719563FFC00B2504D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DD9779C81956467A00B2504D /* Parse.framework */,
 				DD97798819563FFC00B2504D /* Foundation.framework */,
 				DD97798A19563FFC00B2504D /* CoreGraphics.framework */,
 				DD97798C19563FFC00B2504D /* UIKit.framework */,
@@ -328,7 +332,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "a16z/a16z-Prefix.pch";
 				INFOPLIST_FILE = "a16z/a16z-Info.plist";
@@ -342,7 +349,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "a16z/a16z-Prefix.pch";
 				INFOPLIST_FILE = "a16z/a16z-Info.plist";
