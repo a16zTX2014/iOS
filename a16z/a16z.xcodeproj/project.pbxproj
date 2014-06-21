@@ -29,6 +29,8 @@
 		DD9779D71956477B00B2504D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9779D61956477B00B2504D /* Security.framework */; };
 		DD9779D91956478300B2504D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9779D81956478300B2504D /* StoreKit.framework */; };
 		DD9779DB1956478C00B2504D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9779DA1956478C00B2504D /* SystemConfiguration.framework */; };
+		DD9779DE19564C4D00B2504D /* MCSwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9779DD19564C4D00B2504D /* MCSwipeViewController.m */; };
+		DD9779E119564D2700B2504D /* MCMatchProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9779E019564D2700B2504D /* MCMatchProfileView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,10 @@
 		DD9779D61956477B00B2504D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		DD9779D81956478300B2504D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DD9779DA1956478C00B2504D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DD9779DC19564C4D00B2504D /* MCSwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCSwipeViewController.h; path = Classes/Controllers/MCSwipeViewController.h; sourceTree = "<group>"; };
+		DD9779DD19564C4D00B2504D /* MCSwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCSwipeViewController.m; path = Classes/Controllers/MCSwipeViewController.m; sourceTree = "<group>"; };
+		DD9779DF19564D2700B2504D /* MCMatchProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCMatchProfileView.h; path = Classes/Views/MCMatchProfileView.h; sourceTree = "<group>"; };
+		DD9779E019564D2700B2504D /* MCMatchProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCMatchProfileView.m; path = Classes/Views/MCMatchProfileView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +183,8 @@
 		DD9779B91956402C00B2504D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DD9779DF19564D2700B2504D /* MCMatchProfileView.h */,
+				DD9779E019564D2700B2504D /* MCMatchProfileView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -192,6 +200,8 @@
 				934281CF195644BF0037454E /* MCLoginViewController.m */,
 				DD9779C5195645C200B2504D /* MCMatchesViewController.h */,
 				DD9779C6195645C200B2504D /* MCMatchesViewController.m */,
+				DD9779DC19564C4D00B2504D /* MCSwipeViewController.h */,
+				DD9779DD19564C4D00B2504D /* MCSwipeViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -268,9 +278,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD9779E119564D2700B2504D /* MCMatchProfileView.m in Sources */,
 				DD9779C11956439200B2504D /* MCProfileViewController.m in Sources */,
 				DD97799919563FFC00B2504D /* MCAppDelegate.m in Sources */,
 				DD97799519563FFC00B2504D /* main.m in Sources */,
+				DD9779DE19564C4D00B2504D /* MCSwipeViewController.m in Sources */,
 				934281D1195644BF0037454E /* MCLoginViewController.m in Sources */,
 				DD9779C7195645C200B2504D /* MCMatchesViewController.m in Sources */,
 				DD9779BE195642FC00B2504D /* MCDiscoverViewController.m in Sources */,

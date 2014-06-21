@@ -8,6 +8,15 @@
 
 #import "MCDiscoverViewController.h"
 
+@interface MCDiscoverViewController ()
+
+
+@property (nonatomic) UIPageViewController *pageViewController;
+
+@end
+
+
+
 @implementation MCDiscoverViewController
 
 
@@ -17,6 +26,14 @@
         self.title = @"Discover";
     }
     return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    
+    
 }
 
 @end
