@@ -7,6 +7,7 @@
 //
 
 #import "MCAppDelegate.h"
+#import <Parse/Parse.h>
 #import "MCDiscoverViewController.h"
 #import "MCProfileViewController.h"
 #import "MCMatchesViewController.h"
@@ -23,6 +24,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [Parse setApplicationId:@"OZZ5mGxl3vDzZwzEIeGJ19u0PTg16NE7E7xqQn7C"
+                  clientKey:@"59ix5pPVpQkXAPN3jAsHvaWVkwVpGEXSfN2Xohii"];
+    
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     self.tabBarController = [UITabBarController new];
