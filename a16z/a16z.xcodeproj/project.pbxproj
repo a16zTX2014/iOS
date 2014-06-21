@@ -334,6 +334,7 @@
 				DD9779B319563FFC00B2504D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
