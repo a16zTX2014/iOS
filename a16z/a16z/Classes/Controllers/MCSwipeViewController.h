@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+
+@class MCMatchProfile;
+
 @protocol MCSwipeDataSource <NSObject>
+
+- (MCMatchProfile *)nextMatchProfile;
 
 @end
 
@@ -16,7 +21,6 @@
 
 @interface MCSwipeViewController : UIViewController
 
-
-
+@property (nonatomic) id<MCSwipeDataSource> dataSource;
 
 @end

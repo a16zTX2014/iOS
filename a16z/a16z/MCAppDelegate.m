@@ -27,11 +27,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-    [Parse setApplicationId:@"OZZ5mGxl3vDzZwzEIeGJ19u0PTg16NE7E7xqQn7C"
-                  clientKey:@"59ix5pPVpQkXAPN3jAsHvaWVkwVpGEXSfN2Xohii"];
-    
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // Parse setup
@@ -51,11 +46,14 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+#define TEST_LOGIN NO
     if (![PFUser currentUser]) {
+#if TEST_LOGIN
         MCLoginViewController *loginViewController = [[MCLoginViewController alloc] init];
         [self.tabBarController presentViewController:loginViewController
                                             animated:YES
                                           completion:nil];
+#endif
     }
     return YES;
 }
