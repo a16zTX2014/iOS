@@ -9,7 +9,7 @@
 #import "MCAppDelegate.h"
 #import "MCDiscoverViewController.h"
 #import "MCProfileViewController.h"
-#import "MCSettingsViewController.h"
+#import "MCMatchesViewController.h"
 
 
 @interface MCAppDelegate ()
@@ -28,7 +28,7 @@
     self.tabBarController = [UITabBarController new];
     self.tabBarController.viewControllers = @[[MCDiscoverViewController new],
                                               [MCProfileViewController new],
-                                              [MCSettingsViewController new]];
+                                              [MCMatchesViewController new]];
     
     self.tabBarController.selectedIndex = 0;
     
