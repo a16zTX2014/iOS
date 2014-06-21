@@ -27,8 +27,8 @@
     
     self.tabBarController = [UITabBarController new];
     self.tabBarController.viewControllers = @[[MCDiscoverViewController new],
-                                              [MCProfileViewController new],
-                                              [MCMatchesViewController new]];
+                                              [MCMatchesViewController new],
+                                              [MCProfileViewController new]];
     
     self.tabBarController.selectedIndex = 0;
     

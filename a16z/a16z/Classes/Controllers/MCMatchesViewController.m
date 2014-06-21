@@ -10,4 +10,14 @@
 
 @implementation MCMatchesViewController
 
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        self.title = @"Matches";
+    }
+    return self;
+}
+
+
 @end
