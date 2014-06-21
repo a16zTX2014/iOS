@@ -20,6 +20,15 @@
 		DD9779C11956439200B2504D /* MCProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9779C01956439200B2504D /* MCProfileViewController.m */; };
 		DD9779C7195645C200B2504D /* MCMatchesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9779C6195645C200B2504D /* MCMatchesViewController.m */; };
 		DD9779C91956467A00B2504D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9779C81956467A00B2504D /* Parse.framework */; };
+		DD9779CB1956472900B2504D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9779CA1956472900B2504D /* AudioToolbox.framework */; };
+		DD9779CD1956473100B2504D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9779CC1956473100B2504D /* CFNetwork.framework */; };
+		DD9779CF1956473B00B2504D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9779CE1956473B00B2504D /* CoreLocation.framework */; };
+		DD9779D11956474800B2504D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9779D01956474800B2504D /* libz.dylib */; };
+		DD9779D31956476200B2504D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9779D21956476200B2504D /* MobileCoreServices.framework */; };
+		DD9779D51956477300B2504D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9779D41956477300B2504D /* QuartzCore.framework */; };
+		DD9779D71956477B00B2504D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9779D61956477B00B2504D /* Security.framework */; };
+		DD9779D91956478300B2504D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9779D81956478300B2504D /* StoreKit.framework */; };
+		DD9779DB1956478C00B2504D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9779DA1956478C00B2504D /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +46,6 @@
 		DD97799719563FFC00B2504D /* MCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCAppDelegate.h; sourceTree = "<group>"; };
 		DD97799819563FFC00B2504D /* MCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCAppDelegate.m; sourceTree = "<group>"; };
 		DD97799A19563FFC00B2504D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		DD9779A119563FFC00B2504D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		DD9779BC195642FC00B2504D /* MCDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCDiscoverViewController.h; path = Classes/Controllers/MCDiscoverViewController.h; sourceTree = "<group>"; };
 		DD9779BD195642FC00B2504D /* MCDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCDiscoverViewController.m; path = Classes/Controllers/MCDiscoverViewController.m; sourceTree = "<group>"; };
 		DD9779BF1956439200B2504D /* MCProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCProfileViewController.h; path = Classes/Controllers/MCProfileViewController.h; sourceTree = "<group>"; };
@@ -45,6 +53,15 @@
 		DD9779C5195645C200B2504D /* MCMatchesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCMatchesViewController.h; path = Classes/Controllers/MCMatchesViewController.h; sourceTree = "<group>"; };
 		DD9779C6195645C200B2504D /* MCMatchesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCMatchesViewController.m; path = Classes/Controllers/MCMatchesViewController.m; sourceTree = "<group>"; };
 		DD9779C81956467A00B2504D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		DD9779CA1956472900B2504D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DD9779CC1956473100B2504D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		DD9779CE1956473B00B2504D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DD9779D01956474800B2504D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		DD9779D21956476200B2504D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		DD9779D41956477300B2504D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DD9779D61956477B00B2504D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DD9779D81956478300B2504D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		DD9779DA1956478C00B2504D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +69,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD9779DB1956478C00B2504D /* SystemConfiguration.framework in Frameworks */,
+				DD9779D91956478300B2504D /* StoreKit.framework in Frameworks */,
+				DD9779D71956477B00B2504D /* Security.framework in Frameworks */,
+				DD9779D51956477300B2504D /* QuartzCore.framework in Frameworks */,
+				DD9779D31956476200B2504D /* MobileCoreServices.framework in Frameworks */,
+				DD9779D11956474800B2504D /* libz.dylib in Frameworks */,
+				DD9779CF1956473B00B2504D /* CoreLocation.framework in Frameworks */,
+				DD9779CD1956473100B2504D /* CFNetwork.framework in Frameworks */,
+				DD9779CB1956472900B2504D /* AudioToolbox.framework in Frameworks */,
 				DD97798B19563FFC00B2504D /* CoreGraphics.framework in Frameworks */,
 				DD97798D19563FFC00B2504D /* UIKit.framework in Frameworks */,
 				DD9779C91956467A00B2504D /* Parse.framework in Frameworks */,
@@ -90,11 +116,19 @@
 		DD97798719563FFC00B2504D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DD9779DA1956478C00B2504D /* SystemConfiguration.framework */,
+				DD9779D81956478300B2504D /* StoreKit.framework */,
+				DD9779D61956477B00B2504D /* Security.framework */,
+				DD9779D41956477300B2504D /* QuartzCore.framework */,
+				DD9779D21956476200B2504D /* MobileCoreServices.framework */,
+				DD9779D01956474800B2504D /* libz.dylib */,
+				DD9779CE1956473B00B2504D /* CoreLocation.framework */,
+				DD9779CC1956473100B2504D /* CFNetwork.framework */,
+				DD9779CA1956472900B2504D /* AudioToolbox.framework */,
 				DD9779C81956467A00B2504D /* Parse.framework */,
 				DD97798819563FFC00B2504D /* Foundation.framework */,
 				DD97798A19563FFC00B2504D /* CoreGraphics.framework */,
 				DD97798C19563FFC00B2504D /* UIKit.framework */,
-				DD9779A119563FFC00B2504D /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
