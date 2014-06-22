@@ -8,6 +8,8 @@
 
 #import "MCSwipeViewController.h"
 #import "MCMatchProfileView.h"
+#import "UIImage+ImageEffects.h"
+
 
 @interface MCSwipeViewController ()
 
