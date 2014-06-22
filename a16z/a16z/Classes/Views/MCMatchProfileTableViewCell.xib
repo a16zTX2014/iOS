@@ -68,6 +68,14 @@
                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YK-mp-ImX">
+                        <rect key="frame" x="248" y="13" width="52" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="A0U-I7-qM1" firstAttribute="leading" secondItem="jig-9c-Lni" secondAttribute="trailing" constant="54" id="13z-Jx-Iwz"/>
@@ -84,6 +92,7 @@
             <color key="backgroundColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="0.0" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="callButton" destination="jig-9c-Lni" id="vbg-Jo-Niw"/>
+                <outlet property="helperLabel" destination="3YK-mp-ImX" id="J6y-iN-eIh"/>
                 <outlet property="imageView" destination="Zf6-fy-W08" id="zFl-Mp-lfo"/>
                 <outlet property="nameLabel" destination="SN6-kV-AJ4" id="hi1-d2-OQI"/>
                 <outlet property="profileImageView" destination="Zf6-fy-W08" id="1iM-Q2-M7y"/>

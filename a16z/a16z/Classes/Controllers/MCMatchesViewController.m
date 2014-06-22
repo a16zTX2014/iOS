@@ -8,6 +8,7 @@
 
 #import "MCMatchesViewController.h"
 #import <Parse/Parse.h>
+#import <QuartzCore/QuartzCore.h>
 #import "MBProgressHUD.h"
 #import "MCMatchProfileTableViewCell.h"
 #import "UIImage+ImageEffects.h"
@@ -143,10 +144,26 @@
     }
     
     PFUser *user = self.matches[indexPath.row];
+    NSArray *skills = [user valueForKey:@"skills"];
+    if (skills != NULL) {
+        if ([skills containsObject:@"Help"]) {
+            NSLog(@"NO");
+            cell.helperLabel.hidden = NO;
+            cell.helperLabel.layer.cornerRadius = 6;
+        } else {
+            cell.helperLabel.hidden = YES;
+            NSLog(@"YES");
+        }
+    } else {
+        cell.helperLabel.hidden = YES;
+    }
+    
     cell.nameLabel.text = user[@"name"];
     cell.schoolLabel.text = user[@"school"];
     cell.profileImageView.image = [UIImage imageWithData:user[@"image"]];
     cell.phoneNumber = user[@"phone"];
+    
+    
     return cell;
 }
 
