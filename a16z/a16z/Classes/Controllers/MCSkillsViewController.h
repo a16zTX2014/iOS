@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *androidButton;
 @property (weak, nonatomic) IBOutlet UIButton *hardwareButton;
 @property (weak, nonatomic) IBOutlet UIButton *designButton;
+@property (weak, nonatomic) IBOutlet UIButton *helpButton;
 
 @property (weak, nonatomic) UIColor *backgroundColor;
 

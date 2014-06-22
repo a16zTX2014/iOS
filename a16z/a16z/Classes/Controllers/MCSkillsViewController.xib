@@ -12,6 +12,7 @@
                 <outlet property="doneButton" destination="fSd-vZ-5LM" id="mn9-4J-cKk"/>
                 <outlet property="frontendButton" destination="FgP-Nc-gbS" id="zPF-xW-Ah1"/>
                 <outlet property="hardwareButton" destination="23o-j2-EQQ" id="MmS-kg-Jg6"/>
+                <outlet property="helpButton" destination="fdE-ct-vdf" id="zcw-Z2-VoA"/>
                 <outlet property="iOSButton" destination="zGP-QT-2yH" id="6t3-Q8-nzN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -65,6 +66,19 @@
                     </state>
                     <connections>
                         <action selector="didTouchUpInsideButton:" destination="-1" eventType="touchUpInside" id="uFd-v0-Ak2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdE-ct-vdf">
+                    <rect key="frame" x="81" y="387" width="159" height="62"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.85490202900000001" green="0.87843143940000001" blue="0.90196084980000002" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="Help">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="didTouchUpInsideButton:" destination="-1" eventType="touchUpInside" id="Pop-wt-Xgq"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P43-wK-qUY">
