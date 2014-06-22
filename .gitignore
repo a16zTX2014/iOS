@@ -24,6 +24,7 @@ profile
 *.moved-aside
 DerivedData
 .idea/
+Pods
 
 #########################
 ## .gitignore file for Xcode4 and Xcode5 Source projects
