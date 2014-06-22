@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Comyar Zaheri. All rights reserved.
 //
 
-#import "MCProfileManager.h"
+#import "MCProfileCreationManager.h"
 
-@implementation MCProfileManager
+@implementation MCProfileCreationManager
 
 - (instancetype)_init
 {
@@ -57,12 +57,12 @@
                                  userInfo:nil];
 }
 
-+ (MCProfileManager *)sharedManager
++ (MCProfileCreationManager *)sharedManager
 {
     static dispatch_once_t onceToken;
-    static MCProfileManager *sharedManager = nil;
+    static MCProfileCreationManager *sharedManager = nil;
     dispatch_once(&onceToken, ^{
-        sharedManager = [[MCProfileManager alloc]_init];
+        sharedManager = [[MCProfileCreationManager alloc]_init];
     });
     return sharedManager;
 }

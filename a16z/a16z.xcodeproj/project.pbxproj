@@ -18,7 +18,7 @@
 		934281EF195672200037454E /* MCSkillsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 934281ED195672200037454E /* MCSkillsViewController.xib */; };
 		934281FA19568DC60037454E /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 934281F919568DC60037454E /* camera.png */; };
 		934281FC1956DE910037454E /* icon-ios@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 934281FB1956DE910037454E /* icon-ios@2x.png */; };
-		DD3F003D1956768F002A2C24 /* MCProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3F003C1956768F002A2C24 /* MCProfileManager.m */; };
+		DD3F003D1956768F002A2C24 /* MCProfileCreationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3F003C1956768F002A2C24 /* MCProfileCreationManager.m */; };
 		DD3F003F19568CA1002A2C24 /* MCMatchProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3F003E19568CA1002A2C24 /* MCMatchProfileView.xib */; };
 		DD3F004519568F6F002A2C24 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3F004419568F6F002A2C24 /* FacebookSDK.framework */; };
 		DD3F004719568F7D002A2C24 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3F004619568F7D002A2C24 /* Social.framework */; };
@@ -28,6 +28,9 @@
 		DD3F00561956C6EA002A2C24 /* MCProfileEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3F00551956C6EA002A2C24 /* MCProfileEditViewController.m */; };
 		DD3F005A1956DF55002A2C24 /* MCMatchProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3F00581956DF55002A2C24 /* MCMatchProfileTableViewCell.m */; };
 		DD3F005B1956DF55002A2C24 /* MCMatchProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3F00591956DF55002A2C24 /* MCMatchProfileTableViewCell.xib */; };
+		DD3F005E1956E66C002A2C24 /* MCMatchDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3F005D1956E66C002A2C24 /* MCMatchDetailViewController.m */; };
+		DD3F00611956EC09002A2C24 /* MCLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3F00601956EC09002A2C24 /* MCLoadingView.m */; };
+		DD3F00631956EC1B002A2C24 /* MCLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3F00621956EC1B002A2C24 /* MCLoadingView.xib */; };
 		DD97798919563FFC00B2504D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97798819563FFC00B2504D /* Foundation.framework */; };
 		DD97798B19563FFC00B2504D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97798A19563FFC00B2504D /* CoreGraphics.framework */; };
 		DD97798D19563FFC00B2504D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97798C19563FFC00B2504D /* UIKit.framework */; };
@@ -68,8 +71,8 @@
 		934281F919568DC60037454E /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		934281FB1956DE910037454E /* icon-ios@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios@2x.png"; sourceTree = "<group>"; };
 		9A5838A15BD240C386E9EF3A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		DD3F003B1956768F002A2C24 /* MCProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCProfileManager.h; path = Classes/Models/MCProfileManager.h; sourceTree = "<group>"; };
-		DD3F003C1956768F002A2C24 /* MCProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCProfileManager.m; path = Classes/Models/MCProfileManager.m; sourceTree = "<group>"; };
+		DD3F003B1956768F002A2C24 /* MCProfileCreationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCProfileCreationManager.h; path = Classes/Models/MCProfileCreationManager.h; sourceTree = "<group>"; };
+		DD3F003C1956768F002A2C24 /* MCProfileCreationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCProfileCreationManager.m; path = Classes/Models/MCProfileCreationManager.m; sourceTree = "<group>"; };
 		DD3F003E19568CA1002A2C24 /* MCMatchProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MCMatchProfileView.xib; path = Classes/Views/MCMatchProfileView.xib; sourceTree = "<group>"; };
 		DD3F004419568F6F002A2C24 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		DD3F004619568F7D002A2C24 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -83,6 +86,11 @@
 		DD3F00571956DF55002A2C24 /* MCMatchProfileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCMatchProfileTableViewCell.h; path = Classes/Views/MCMatchProfileTableViewCell.h; sourceTree = "<group>"; };
 		DD3F00581956DF55002A2C24 /* MCMatchProfileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCMatchProfileTableViewCell.m; path = Classes/Views/MCMatchProfileTableViewCell.m; sourceTree = "<group>"; };
 		DD3F00591956DF55002A2C24 /* MCMatchProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MCMatchProfileTableViewCell.xib; path = Classes/Views/MCMatchProfileTableViewCell.xib; sourceTree = "<group>"; };
+		DD3F005C1956E66C002A2C24 /* MCMatchDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCMatchDetailViewController.h; path = Classes/Controllers/MCMatchDetailViewController.h; sourceTree = "<group>"; };
+		DD3F005D1956E66C002A2C24 /* MCMatchDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCMatchDetailViewController.m; path = Classes/Controllers/MCMatchDetailViewController.m; sourceTree = "<group>"; };
+		DD3F005F1956EC09002A2C24 /* MCLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCLoadingView.h; path = Classes/Views/MCLoadingView.h; sourceTree = "<group>"; };
+		DD3F00601956EC09002A2C24 /* MCLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCLoadingView.m; path = Classes/Views/MCLoadingView.m; sourceTree = "<group>"; };
+		DD3F00621956EC1B002A2C24 /* MCLoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MCLoadingView.xib; path = Classes/Views/MCLoadingView.xib; sourceTree = "<group>"; };
 		DD97798519563FFC00B2504D /* a16z.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = a16z.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD97798819563FFC00B2504D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DD97798A19563FFC00B2504D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -186,6 +194,8 @@
 			children = (
 				DD9779C5195645C200B2504D /* MCMatchesViewController.h */,
 				DD9779C6195645C200B2504D /* MCMatchesViewController.m */,
+				DD3F005C1956E66C002A2C24 /* MCMatchDetailViewController.h */,
+				DD3F005D1956E66C002A2C24 /* MCMatchDetailViewController.m */,
 			);
 			name = MCMatches;
 			sourceTree = "<group>";
@@ -309,8 +319,8 @@
 			children = (
 				DD3F004B1956B318002A2C24 /* UIImage+ImageEffects.h */,
 				DD3F004C1956B318002A2C24 /* UIImage+ImageEffects.m */,
-				DD3F003B1956768F002A2C24 /* MCProfileManager.h */,
-				DD3F003C1956768F002A2C24 /* MCProfileManager.m */,
+				DD3F003B1956768F002A2C24 /* MCProfileCreationManager.h */,
+				DD3F003C1956768F002A2C24 /* MCProfileCreationManager.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -324,6 +334,9 @@
 				DD3F00571956DF55002A2C24 /* MCMatchProfileTableViewCell.h */,
 				DD3F00581956DF55002A2C24 /* MCMatchProfileTableViewCell.m */,
 				DD3F00591956DF55002A2C24 /* MCMatchProfileTableViewCell.xib */,
+				DD3F005F1956EC09002A2C24 /* MCLoadingView.h */,
+				DD3F00601956EC09002A2C24 /* MCLoadingView.m */,
+				DD3F00621956EC1B002A2C24 /* MCLoadingView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -406,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				934281EF195672200037454E /* MCSkillsViewController.xib in Resources */,
+				DD3F00631956EC1B002A2C24 /* MCLoadingView.xib in Resources */,
 				DD97799319563FFC00B2504D /* InfoPlist.strings in Resources */,
 				934281E519566FF00037454E /* MCPersonalViewController.xib in Resources */,
 				934281D2195644BF0037454E /* MCLoginViewController.xib in Resources */,
@@ -460,18 +474,20 @@
 			files = (
 				934281EE195672200037454E /* MCSkillsViewController.m in Sources */,
 				DD3F005A1956DF55002A2C24 /* MCMatchProfileTableViewCell.m in Sources */,
+				DD3F00611956EC09002A2C24 /* MCLoadingView.m in Sources */,
 				DD3F004D1956B318002A2C24 /* UIImage+ImageEffects.m in Sources */,
 				934281E419566FF00037454E /* MCPersonalViewController.m in Sources */,
 				DD3F00511956BA16002A2C24 /* MCProfileViewController.m in Sources */,
 				DD9779E119564D2700B2504D /* MCMatchProfileView.m in Sources */,
 				934281DF19566B430037454E /* MCWelcomeViewController.m in Sources */,
+				DD3F005E1956E66C002A2C24 /* MCMatchDetailViewController.m in Sources */,
 				DD3F00561956C6EA002A2C24 /* MCProfileEditViewController.m in Sources */,
 				DD97799919563FFC00B2504D /* MCAppDelegate.m in Sources */,
 				DD97799519563FFC00B2504D /* main.m in Sources */,
 				DD9779DE19564C4D00B2504D /* MCSwipeViewController.m in Sources */,
 				934281D1195644BF0037454E /* MCLoginViewController.m in Sources */,
 				DD9779C7195645C200B2504D /* MCMatchesViewController.m in Sources */,
-				DD3F003D1956768F002A2C24 /* MCProfileManager.m in Sources */,
+				DD3F003D1956768F002A2C24 /* MCProfileCreationManager.m in Sources */,
 				DD9779BE195642FC00B2504D /* MCDiscoverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

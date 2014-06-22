@@ -16,4 +16,9 @@
     self.profileImageView.layer.masksToBounds = YES;
 }
 
+- (void)layoutSubviews
+{
+    
+}
+
 @end

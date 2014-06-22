@@ -10,7 +10,7 @@
 #import "MCSwipeViewController.h"
 #import "MCMatchProfileView.h"
 #import "UIImage+ImageEffects.h"
-
+#import "MCLoadingView.h"
 
 @interface MCSwipeViewController ()
 
@@ -22,6 +22,8 @@
 @property (nonatomic) MCMatchProfileView *currentProfileView;
 @property (nonatomic) MCMatchProfileView *nextProfileView;
 
+
+@property (nonatomic) MCLoadingView *loadingView;
 @property (nonatomic) UIView *acceptView;
 @property (nonatomic) UIView *rejectView;
 
@@ -47,6 +49,7 @@
     [self.view addGestureRecognizer:self.panGestureRecognizer];
     
     self.nextProfileView = [[MCMatchProfileView alloc]initWithFrame:self.view.frame];
+    
     self.currentProfileView = [[MCMatchProfileView alloc]initWithFrame:self.view.frame];
     
     self.acceptView = [[UIView alloc]initWithFrame:self.view.bounds];
@@ -55,17 +58,18 @@
     self.rejectView = [[UIView alloc]initWithFrame:self.view.bounds];
     self.rejectView.backgroundColor = [UIColor redColor];
     
+    self.loadingView = [[MCLoadingView alloc]initWithFrame:self.view.bounds];
+    
     [self.view addSubview:self.nextProfileView];
     [self.view addSubview:self.acceptView];
     [self.view addSubview:self.rejectView];
     [self.view addSubview:self.currentProfileView];
+    [self.view addSubview:self.loadingView];
 }
 
 - (void)didRecognizePanGesture:(UIPanGestureRecognizer *)gestureRecognizer
 {
     CGPoint delta = [gestureRecognizer translationInView:self.view];
-    
-    
     
     if (gestureRecognizer.state == UIGestureRecognizerStateBegan ||
         gestureRecognizer.state == UIGestureRecognizerStateChanged) {
@@ -192,6 +196,11 @@
 - (void)updateProfileView:(MCMatchProfileView *)profileView withUser:(PFUser *)user
 {
     if (user) {
+        
+        [UIView animateWithDuration:0.3 animations:^{
+            self.loadingView.alpha = 0.0;
+        }];
+        
         profileView.imageView.image = [UIImage imageWithData:user[@"image"]];
         profileView.nameLabel.text = user[@"name"];
         profileView.schoolLabel.text = user[@"school"];

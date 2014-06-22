@@ -8,7 +8,7 @@
 
 #import "MCPersonalViewController.h"
 #import "MCSkillsViewController.h"
-#import "MCProfileManager.h"
+#import "MCProfileCreationManager.h"
 
 @interface MCPersonalViewController ()
 
@@ -56,9 +56,9 @@
 
 - (IBAction)didTouchUpInsideButton:(id)sender {
     if (sender == self.nextButton) {
-        [MCProfileManager sharedManager].name = self.nameTextField.text;
-        [MCProfileManager sharedManager].school = self.schoolTextField.text;
-        [MCProfileManager sharedManager].phone = self.phoneTextField.text;
+        [MCProfileCreationManager sharedManager].name = self.nameTextField.text;
+        [MCProfileCreationManager sharedManager].school = self.schoolTextField.text;
+        [MCProfileCreationManager sharedManager].phone = self.phoneTextField.text;
 
         MCSkillsViewController *skillsViewController = [[MCSkillsViewController alloc] init];
         [self.navigationController pushViewController:skillsViewController animated:YES];

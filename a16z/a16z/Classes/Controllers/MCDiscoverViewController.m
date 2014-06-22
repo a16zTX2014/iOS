@@ -42,6 +42,8 @@
     [self.view addSubview:self.swipeViewController.view];
     [self addChildViewController:self.swipeViewController];
     [self.swipeViewController didMoveToParentViewController:self];
+    
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated

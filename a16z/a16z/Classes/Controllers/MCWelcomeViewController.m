@@ -9,7 +9,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "MCWelcomeViewController.h"
 #import "MCPersonalViewController.h"
-#import "MCProfileManager.h"
+#import "MCProfileCreationManager.h"
 
 @interface MCWelcomeViewController ()
 
@@ -63,7 +63,7 @@
             [self presentViewController:picker animated:YES completion:nil];
     } else if (sender == self.nextButton) {
         // Save the image
-        [MCProfileManager sharedManager].image = self.profileImageView.image;
+        [MCProfileCreationManager sharedManager].image = self.profileImageView.image;
         
         MCPersonalViewController *welcomeViewController = [[MCPersonalViewController alloc] init];
         [self.navigationController pushViewController:welcomeViewController animated:YES];

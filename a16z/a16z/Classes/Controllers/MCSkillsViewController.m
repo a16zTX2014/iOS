@@ -9,7 +9,7 @@
 #import <Parse/Parse.h>
 #import <QuartzCore/QuartzCore.h>
 #import "MCSkillsViewController.h"
-#import "MCProfileManager.h"
+#import "MCProfileCreationManager.h"
 
 @interface MCSkillsViewController ()
 
@@ -31,16 +31,16 @@
     if (sender == self.doneButton) {
         // Save all of the user's information
         PFUser *currentUser = [PFUser currentUser];
-        currentUser[@"name"] = [MCProfileManager sharedManager].name;
-        currentUser[@"school"] = [MCProfileManager sharedManager].school;
-        currentUser[@"phone"] = [MCProfileManager sharedManager].phone;
+        currentUser[@"name"] = [MCProfileCreationManager sharedManager].name;
+        currentUser[@"school"] = [MCProfileCreationManager sharedManager].school;
+        currentUser[@"phone"] = [MCProfileCreationManager sharedManager].phone;
         
-        NSData *imageData = UIImageJPEGRepresentation([MCProfileManager sharedManager].image, 0.05f);
+        NSData *imageData = UIImageJPEGRepresentation([MCProfileCreationManager sharedManager].image, 0.05f);
         currentUser[@"image"] = imageData;
         
         NSMutableArray *skillz = [[NSMutableArray alloc] init];
-        for (NSString *key in [[MCProfileManager sharedManager].skills allKeys]) {
-            if ([[MCProfileManager sharedManager].skills[key]  isEqual: @(YES)]) {
+        for (NSString *key in [[MCProfileCreationManager sharedManager].skills allKeys]) {
+            if ([[MCProfileCreationManager sharedManager].skills[key]  isEqual: @(YES)]) {
                 [skillz addObject:key];
             }
         }
@@ -57,16 +57,16 @@
 - (void) buttonLoginShit:(UIButton *)button
 {
     NSString *skill = button.titleLabel.text;
-    if ([[MCProfileManager sharedManager].skills[skill]  isEqual: @(NO)]) {
-        NSMutableDictionary *newDict = [[MCProfileManager sharedManager].skills mutableCopy];
+    if ([[MCProfileCreationManager sharedManager].skills[skill]  isEqual: @(NO)]) {
+        NSMutableDictionary *newDict = [[MCProfileCreationManager sharedManager].skills mutableCopy];
         newDict[skill] = @(YES);
-        [MCProfileManager sharedManager].skills = newDict;
+        [MCProfileCreationManager sharedManager].skills = newDict;
         [self selectButton: button];
         
-    } else if ([[MCProfileManager sharedManager].skills[skill] isEqual: @(YES)]) {
-        NSMutableDictionary *newDict = [[MCProfileManager sharedManager].skills mutableCopy];
+    } else if ([[MCProfileCreationManager sharedManager].skills[skill] isEqual: @(YES)]) {
+        NSMutableDictionary *newDict = [[MCProfileCreationManager sharedManager].skills mutableCopy];
         newDict[skill] = @(NO);
-        [MCProfileManager sharedManager].skills = newDict;
+        [MCProfileCreationManager sharedManager].skills = newDict;
         [self unselectButton:button];
     }
 

@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MCProfileManager : NSObject
+@interface MCProfileCreationManager : NSObject
 
-+ (MCProfileManager *)sharedManager;
++ (MCProfileCreationManager *)sharedManager;
 
 @property (nonatomic) NSString      *name;
 @property (nonatomic) UIImage       *image;
