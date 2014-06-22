@@ -92,14 +92,21 @@
     NSLog(@"yo cell for item is getting called");
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"yolo"
                                                                            forIndexPath:indexPath];
-    if (!cell) {
-        cell = [[UICollectionViewCell alloc] init];
-        UILabel *label = [[UILabel alloc] initWithFrame:cell.contentView.bounds];
+    
+    UILabel *label = (UILabel *)[cell.contentView viewWithTag:1];
+    if (!label) {
+        label = [[UILabel alloc]initWithFrame:cell.contentView.bounds];
+        label.textColor = [UIColor whiteColor];
+        label.adjustsFontSizeToFitWidth = YES;
+        label.lineBreakMode = NSLineBreakByWordWrapping;
+        label.textAlignment = NSTextAlignmentCenter;
+        label.layer.borderWidth = 1.0;
+        label.layer.borderColor = [UIColor whiteColor].CGColor;
+        label.layer.cornerRadius = 8.0;
+        label.numberOfLines = 0;
         label.tag = 1;
         [cell.contentView addSubview:label];
     }
-    
-    UILabel *label = (UILabel *)[cell.contentView viewWithTag:1];
     
     if (collectionView == self.currentProfileView.skillsCollectionView) {
         NSArray *arr = [self.currentMatchUser valueForKey:@"skills"];
