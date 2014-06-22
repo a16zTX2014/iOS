@@ -123,7 +123,7 @@
 - (void)updateProfileView:(MCMatchProfileView *)profileView withUser:(PFUser *)user
 {
     if (user) {
-        profileView.imageView.image = user[@"image"];
+        profileView.imageView.image = [UIImage imageWithData:user[@"image"]];
         profileView.nameLabel.text = user[@"name"];
         profileView.schoolLabel.text = user[@"school"];
     } else {

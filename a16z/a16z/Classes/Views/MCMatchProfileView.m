@@ -12,9 +12,15 @@
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
-    if (self = [super initWithFrame:frame]) {
-        self.backgroundColor = [UIColor whiteColor];
+    NSArray *views = [[NSBundle mainBundle]loadNibNamed:@"MCMatchProfileView" owner:nil options:nil];
+    
+    if ([views count] == 0) {
+        return nil;
     }
+    
+    self = views[0];
+    self.frame = frame;
+    
     return self;
 }
 

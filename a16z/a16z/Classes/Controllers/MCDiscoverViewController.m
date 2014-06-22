@@ -36,6 +36,7 @@
     [super viewDidLoad];
     
     self.swipeViewController = [[MCSwipeViewController alloc]initWithNibName:nil bundle:nil];
+    self.swipeViewController.dataSource = self;
     [self.swipeViewController willMoveToParentViewController:self];
     self.swipeViewController.view.frame = self.view.frame;
     [self.view addSubview:self.swipeViewController.view];
@@ -74,9 +75,14 @@
     }];
 }
 
-- (MCMatchProfileViewModel *)nextMatchUser
+- (PFUser *)nextMatchUser
 {
-    return nil;
+    PFUser *firstUser = [self.discoverableUsers firstObject];
+    NSLog(@"%@", firstUser);
+    if (firstUser) {
+        [self.discoverableUsers removeObjectAtIndex:0];
+    }
+    return firstUser;
 }
 
 @end
