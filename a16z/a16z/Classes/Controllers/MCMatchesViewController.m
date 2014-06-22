@@ -30,6 +30,29 @@
     return self;
 }
 
+- (void)helpButtonSelected
+{
+    NSLog(@"Help button selected.");
+    PFQuery *query = [PFQuery queryWithClassName:@"_User"];
+    [query whereKey:@"skills" equalTo:@"Help"];
+    [query whereKey:@"username" notEqualTo:[PFUser currentUser].username];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error) {
+            // Whelp shit.
+        } else {
+            NSMutableArray *matches = [NSMutableArray new];
+            
+            for (PFObject *user in objects) {
+                [matches addObject:user];
+            }
+            
+            self.matches = matches;
+            [self.tableView reloadData];
+        }
+    }];
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -39,6 +62,17 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
+    
+//    Well I tried..
+//    UIBarButtonItem *helpButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithContentsOfFile:@"help.png"]
+//                                                                   style:UIBarButtonItemStyleDone
+//                                                                  target:self
+//                                                                  action:@selector(helpButtonSelected)];
+    UIBarButtonItem *helpButton = [[UIBarButtonItem alloc] initWithTitle:@"HALP"
+                                                                   style:UIBarButtonItemStyleBordered
+                                                                  target:self
+                                                                  action:@selector(helpButtonSelected)];
+    self.navigationItem.rightBarButtonItem = helpButton;
 }
 
 - (void)viewDidAppear:(BOOL)animated
