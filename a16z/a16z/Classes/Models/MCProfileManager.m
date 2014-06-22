@@ -19,7 +19,10 @@
         _school = [[NSUserDefaults standardUserDefaults]objectForKey:@"school"];
         
         NSData *imageData = [[NSUserDefaults standardUserDefaults]objectForKey:@"image"];
-        _image = [NSKeyedUnarchiver unarchiveObjectWithData:imageData];
+        if (imageData) {
+            _image = [NSKeyedUnarchiver unarchiveObjectWithData:imageData];
+        }
+        
     }
     return self;
 }
