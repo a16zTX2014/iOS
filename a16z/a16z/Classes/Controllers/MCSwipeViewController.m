@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Comyar Zaheri. All rights reserved.
 //
 
+#import <CRToast/CRToast.h>
 #import "MCSwipeViewController.h"
 #import "MCMatchProfileView.h"
 #import "UIImage+ImageEffects.h"
@@ -137,7 +138,21 @@
             // TODO(matthewe): Maybe you should handle errors yo.
         } else {
             if (objects.count > 0) {
-                // TODO(matthewe): You found a person. Should send a push notification?
+                // TODO(matthewe): You found a person. Should send a push notification to them?
+                NSDictionary *options = @{
+                                          kCRToastTextKey : @"You found a match!",
+                                          kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
+                                          kCRToastBackgroundColorKey : [UIColor blueColor],
+                                          kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
+                                          kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeGravity),
+                                          kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionLeft),
+                                          kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionRight)
+                                          };
+                [CRToastManager showNotificationWithOptions:options
+                                            completionBlock:^{
+                                                NSLog(@"Completed");
+                                            }];
+                
                 NSLog(@"Wow that user was looking for you. Found you someone.");
                 PFObject *firstMatch = objects[0];
                 firstMatch[@"status"] = @2;
