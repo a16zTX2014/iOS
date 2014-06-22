@@ -42,7 +42,8 @@
                                @"Frontend",
                                @"Android",
                                @"Hardware",
-                               @"Design"];
+                               @"Design",
+                               @"Help"];
         for (NSString *skill in skillList) {
             skills[skill] = @(NO);
         }

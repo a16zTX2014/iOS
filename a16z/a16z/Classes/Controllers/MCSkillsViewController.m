@@ -109,7 +109,8 @@
                         self.frontendButton,
                         self.androidButton,
                         self.hardwareButton,
-                        self.designButton];
+                        self.designButton,
+                        self.helpButton];
     
     for (UIButton *button in buttons) {
         button.layer.borderWidth = 2.0f;
