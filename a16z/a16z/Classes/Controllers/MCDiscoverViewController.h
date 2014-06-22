@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MCDiscoverViewController : UIViewController
+#import "MCSwipeViewController.h"
+
+
+@interface MCDiscoverViewController : UIViewController <MCSwipeDataSource>
 
 @end

@@ -31,6 +31,7 @@
 		DD9779DB1956478C00B2504D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9779DA1956478C00B2504D /* SystemConfiguration.framework */; };
 		DD9779DE19564C4D00B2504D /* MCSwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9779DD19564C4D00B2504D /* MCSwipeViewController.m */; };
 		DD9779E119564D2700B2504D /* MCMatchProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9779E019564D2700B2504D /* MCMatchProfileView.m */; };
+		DD9779E4195658EA00B2504D /* MCMatchProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9779E3195658EA00B2504D /* MCMatchProfileViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,8 @@
 		DD9779DD19564C4D00B2504D /* MCSwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCSwipeViewController.m; path = Classes/Controllers/MCSwipeViewController.m; sourceTree = "<group>"; };
 		DD9779DF19564D2700B2504D /* MCMatchProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCMatchProfileView.h; path = Classes/Views/MCMatchProfileView.h; sourceTree = "<group>"; };
 		DD9779E019564D2700B2504D /* MCMatchProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCMatchProfileView.m; path = Classes/Views/MCMatchProfileView.m; sourceTree = "<group>"; };
+		DD9779E2195658EA00B2504D /* MCMatchProfileViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCMatchProfileViewModel.h; path = Classes/Models/MCMatchProfileViewModel.h; sourceTree = "<group>"; };
+		DD9779E3195658EA00B2504D /* MCMatchProfileViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCMatchProfileViewModel.m; path = Classes/Models/MCMatchProfileViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +179,8 @@
 		DD9779B81956402800B2504D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DD9779E2195658EA00B2504D /* MCMatchProfileViewModel.h */,
+				DD9779E3195658EA00B2504D /* MCMatchProfileViewModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 				DD9779DE19564C4D00B2504D /* MCSwipeViewController.m in Sources */,
 				934281D1195644BF0037454E /* MCLoginViewController.m in Sources */,
 				DD9779C7195645C200B2504D /* MCMatchesViewController.m in Sources */,
+				DD9779E4195658EA00B2504D /* MCMatchProfileViewModel.m in Sources */,
 				DD9779BE195642FC00B2504D /* MCDiscoverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
