@@ -63,7 +63,7 @@
     }];
 }
 
-- (MCMatchProfileViewModel *)nextMatchProfileViewModel
+- (MCMatchProfileViewModel *)nextMatchUser
 {
     return nil;
 }
