@@ -7,11 +7,12 @@
 //
 
 #import "MCDiscoverViewController.h"
+#import "MCSwipeViewController.h"
+
 
 @interface MCDiscoverViewController ()
 
-
-@property (nonatomic) UIPageViewController *pageViewController;
+@property (nonatomic) MCSwipeViewController *swipeViewController;
 
 @end
 
@@ -32,7 +33,12 @@
 {
     [super viewDidLoad];
     
-    
+    self.swipeViewController = [[MCSwipeViewController alloc]initWithNibName:nil bundle:nil];
+    [self.swipeViewController willMoveToParentViewController:self];
+    self.swipeViewController.view.frame = self.view.frame;
+    [self.view addSubview:self.swipeViewController.view];
+    [self addChildViewController:self.swipeViewController];
+    [self.swipeViewController didMoveToParentViewController:self];
     
 }
 
