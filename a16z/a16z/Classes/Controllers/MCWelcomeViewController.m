@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Comyar Zaheri. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "MCWelcomeViewController.h"
 #import "MCPersonalViewController.h"
 #import "MCProfileManager.h"
@@ -43,6 +44,12 @@
                              alpha:0.5]
                           forState:UIControlStateNormal];
     self.nextButton.enabled = NO;
+    
+    // Corner radius will be half so it can be a circle
+    self.profileImageView.layer.cornerRadius = 125;
+    self.profileImageView.layer.masksToBounds = YES;
+    
+
 }
 
 - (IBAction)didTouchUpInsideButton:(id)sender {
