@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@class MCMatchProfileViewModel;
 
 @protocol MCSwipeDataSource <NSObject>
 
