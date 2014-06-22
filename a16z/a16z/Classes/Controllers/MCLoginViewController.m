@@ -52,6 +52,7 @@
     self.signupButton.layer.cornerRadius = 10;
     [self.signupButton setTitleColor:[UIColor whiteColor]
                             forState:UIControlStateNormal];
+    
 }
 
 

@@ -17,6 +17,7 @@
 		934281EE195672200037454E /* MCSkillsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 934281EC195672200037454E /* MCSkillsViewController.m */; };
 		934281EF195672200037454E /* MCSkillsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 934281ED195672200037454E /* MCSkillsViewController.xib */; };
 		934281FA19568DC60037454E /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 934281F919568DC60037454E /* camera.png */; };
+		934281FC1956DE910037454E /* icon-ios@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 934281FB1956DE910037454E /* icon-ios@2x.png */; };
 		DD3F003D1956768F002A2C24 /* MCProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3F003C1956768F002A2C24 /* MCProfileManager.m */; };
 		DD3F003F19568CA1002A2C24 /* MCMatchProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3F003E19568CA1002A2C24 /* MCMatchProfileView.xib */; };
 		DD3F004519568F6F002A2C24 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3F004419568F6F002A2C24 /* FacebookSDK.framework */; };
@@ -65,6 +66,7 @@
 		934281EC195672200037454E /* MCSkillsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCSkillsViewController.m; path = Classes/Controllers/MCSkillsViewController.m; sourceTree = "<group>"; };
 		934281ED195672200037454E /* MCSkillsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MCSkillsViewController.xib; path = Classes/Controllers/MCSkillsViewController.xib; sourceTree = "<group>"; };
 		934281F919568DC60037454E /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		934281FB1956DE910037454E /* icon-ios@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios@2x.png"; sourceTree = "<group>"; };
 		9A5838A15BD240C386E9EF3A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		DD3F003B1956768F002A2C24 /* MCProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCProfileManager.h; path = Classes/Models/MCProfileManager.h; sourceTree = "<group>"; };
 		DD3F003C1956768F002A2C24 /* MCProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCProfileManager.m; path = Classes/Models/MCProfileManager.m; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 		934281F819568DB40037454E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				934281FB1956DE910037454E /* icon-ios@2x.png */,
 				934281F919568DC60037454E /* camera.png */,
 			);
 			name = Images;
@@ -408,6 +411,7 @@
 				934281D2195644BF0037454E /* MCLoginViewController.xib in Resources */,
 				DD97799B19563FFC00B2504D /* Images.xcassets in Resources */,
 				DD3F003F19568CA1002A2C24 /* MCMatchProfileView.xib in Resources */,
+				934281FC1956DE910037454E /* icon-ios@2x.png in Resources */,
 				934281FA19568DC60037454E /* camera.png in Resources */,
 				DD3F005B1956DF55002A2C24 /* MCMatchProfileTableViewCell.xib in Resources */,
 				934281E019566B430037454E /* MCWelcomeViewController.xib in Resources */,
