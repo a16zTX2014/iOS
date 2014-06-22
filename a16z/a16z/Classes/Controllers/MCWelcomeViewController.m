@@ -8,6 +8,7 @@
 
 #import "MCWelcomeViewController.h"
 #import "MCPersonalViewController.h"
+#import "MCProfileManager.h"
 
 @interface MCWelcomeViewController ()
 
@@ -40,6 +41,9 @@
             
             [self presentViewController:picker animated:YES completion:nil];
     } else if (sender == self.nextButton) {
+        // Save the image
+        [MCProfileManager sharedManager].image = self.profileImageView.image;
+        
         MCPersonalViewController *welcomeViewController = [[MCPersonalViewController alloc] init];
         [self.navigationController pushViewController:welcomeViewController animated:YES];
     }
@@ -48,7 +52,7 @@
 - (void)imagePickerController:(UIImagePickerController *) picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    self.profilePicture.image = chosenImage;
+    self.profileImageView.image = chosenImage;
     [picker dismissViewControllerAnimated:YES completion:nil];
     
     self.nextButton.enabled = YES;

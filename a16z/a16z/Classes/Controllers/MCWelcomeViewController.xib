@@ -8,7 +8,7 @@
             <connections>
                 <outlet property="cameraButton" destination="WEs-hI-gbW" id="BsE-I9-0wy"/>
                 <outlet property="nextButton" destination="ONY-kK-Uv3" id="kY7-GP-xcD"/>
-                <outlet property="profilePicture" destination="vKW-1M-7Q8" id="9xi-FH-c7a"/>
+                <outlet property="profileImageView" destination="vKW-1M-7Q8" id="oPU-Ss-vG9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
