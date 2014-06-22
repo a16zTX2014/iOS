@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MCMatchProfileView : UIView
-
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *schoolLabel;

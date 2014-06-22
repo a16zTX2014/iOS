@@ -62,7 +62,11 @@
     [self.window makeKeyAndVisible];
     
     [UITabBar appearance].tintColor = [UIColor orangeColor];
-    [UITabBar appearance].barTintColor = [UIColor whiteColor];
+    [UITabBar appearance].barTintColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+    
+//    [[UINavigationBar appearance]setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    [UINavigationBar appearance].backgroundColor = [UIColor whiteColor];
+    [UINavigationBar appearance].tintColor = [UIColor orangeColor];
     
     if (![PFUser currentUser]) {
 

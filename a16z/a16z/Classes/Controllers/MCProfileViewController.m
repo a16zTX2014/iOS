@@ -8,6 +8,7 @@
 
 #import "MCProfileViewController.h"
 #import "MCProfileEditViewController.h"
+#import "UIImage+ImageEffects.h"
 #import <Parse/Parse.h>
 
 @interface MCProfileViewController ()
@@ -43,11 +44,19 @@
     self.imageView.contentMode = UIViewContentModeScaleAspectFill;
     self.imageView.layer.cornerRadius = 0.5 * CGRectGetWidth(self.imageView.bounds);
     self.imageView.layer.masksToBounds = YES;
+    self.imageView.layer.borderWidth = 2.0;
+    self.imageView.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:0.25].CGColor;
     
     [imageViewContainer addSubview:self.imageView];
     self.imageView.center = imageViewContainer.center;
     
-    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    UIImageView *backgroundImageView = [[UIImageView alloc]initWithImage:[self.imageView.image applyDarkEffect]];
+    backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
+    backgroundImageView.frame = self.view.frame;
+    
+    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundView = backgroundImageView;
     self.tableView.tableHeaderView = imageViewContainer;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -66,8 +75,11 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProfileTableViewCell"];
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"ProfileTableViewCell"];
+        cell.textLabel.textColor = [UIColor whiteColor];
         cell.detailTextLabel.textColor = [UIColor lightGrayColor];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.backgroundColor = [UIColor clearColor];
+        
     }
     
     if (indexPath.section == 0) {
@@ -105,12 +117,9 @@
     return 0;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+- (UIStatusBarStyle)preferredStatusBarStyle
 {
-    if (section == 0) {
-        return @"Basic Information";
-    }
-    return nil;
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -132,6 +141,24 @@
     }
     
     [self.navigationController pushViewController:self.editViewController animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 32.0;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    return ({
+        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0.0, 0.0, CGRectGetWidth(self.view.bounds), 32.0)];
+        label.textColor = [UIColor whiteColor];
+        label.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.1];
+        if (section == 0) {
+            label.text = @"   Basic Information";
+        }
+        label;
+    });
 }
 
 

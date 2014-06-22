@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 #import "MBProgressHUD.h"
 #import "MCMatchProfileTableViewCell.h"
-
+#import "UIImage+ImageEffects.h"
 
 @interface MCMatchesViewController ()
 
@@ -34,10 +34,16 @@
 {
     [super viewDidLoad];
     
+    NSData *imageData = [PFUser currentUser][@"image"];
+    UIImageView *backgroundImageView = [[UIImageView alloc]initWithImage:[[UIImage imageWithData:imageData] applyDarkEffect]];
+    backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
+    backgroundImageView.frame = self.view.frame;
+    
     self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0.0, 20.0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - 20.0) style:UITableViewStylePlain];
     self.tableView.rowHeight = 120;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.backgroundView = backgroundImageView;
     [self.view addSubview:self.tableView];
 }
 
@@ -92,6 +98,13 @@
         NSArray *views = [[NSBundle mainBundle]loadNibNamed:@"MCMatchProfileTableViewCell" owner:nil options:nil];
         if ([views count] > 0) {
             cell = views[0];
+            cell.callButton.layer.cornerRadius = 4.0;
+            cell.callButton.layer.borderWidth = 1.0;
+            cell.callButton.layer.borderColor = [UIColor yellowColor].CGColor;
+            
+            cell.textButton.layer.cornerRadius = 4.0;
+            cell.textButton.layer.borderWidth = 1.0;
+            cell.textButton.layer.borderColor = [UIColor yellowColor].CGColor;
         }
     }
     

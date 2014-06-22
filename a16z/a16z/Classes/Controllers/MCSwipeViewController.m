@@ -204,10 +204,12 @@
         profileView.imageView.image = [UIImage imageWithData:user[@"image"]];
         profileView.nameLabel.text = user[@"name"];
         profileView.schoolLabel.text = user[@"school"];
+        profileView.backgroundImageView.image = [profileView.imageView.image applyDarkEffect];
     } else {
         profileView.imageView.image = nil;
         profileView.nameLabel.text = nil;
         profileView.schoolLabel.text = nil;
+        profileView.backgroundImageView.image = nil;
     }
 }
 
