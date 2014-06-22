@@ -27,6 +27,8 @@
 @property (nonatomic) UIView *acceptView;
 @property (nonatomic) UIView *rejectView;
 
+@property (nonatomic) UILabel *emptyLabel;
+
 @end
 
 
@@ -45,6 +47,8 @@
 {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor blackColor];
+    
     self.panGestureRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(didRecognizePanGesture:)];
     [self.view addGestureRecognizer:self.panGestureRecognizer];
     
@@ -60,6 +64,15 @@
     
     self.loadingView = [[MCLoadingView alloc]initWithFrame:self.view.bounds];
     
+    
+    self.emptyLabel = [[UILabel alloc]initWithFrame:CGRectMake(0.0, 0.0, CGRectGetWidth(self.view.bounds), 64.0)];
+    self.emptyLabel.textColor = [UIColor colorWithWhite:1.0 alpha:0.75];
+    self.emptyLabel.text = @"No available hackers";
+    self.emptyLabel.center = self.view.center;
+    self.emptyLabel.textAlignment = NSTextAlignmentCenter;
+    self.emptyLabel.alpha = 0.0;
+    [self.view addSubview:self.emptyLabel];
+    
     [self.view addSubview:self.nextProfileView];
     [self.view addSubview:self.acceptView];
     [self.view addSubview:self.rejectView];
@@ -70,6 +83,10 @@
 - (void)didRecognizePanGesture:(UIPanGestureRecognizer *)gestureRecognizer
 {
     CGPoint delta = [gestureRecognizer translationInView:self.view];
+    
+    if (!self.currentMatchUser) {
+        return;
+    }
     
     if (gestureRecognizer.state == UIGestureRecognizerStateBegan ||
         gestureRecognizer.state == UIGestureRecognizerStateChanged) {
@@ -191,6 +208,20 @@
     
     [self updateProfileView:self.currentProfileView withUser:self.currentMatchUser];
     [self updateProfileView:self.nextProfileView withUser:self.nextMatchUser];
+    
+    
+    if (!self.currentMatchUser) {
+        self.currentProfileView.alpha = 0.0;
+        self.rejectView.alpha = 0.0;
+        self.acceptView.alpha = 0.0;
+        self.nextProfileView.alpha = 0.0;
+        self.emptyLabel.alpha = 1.0;
+        return;
+    } else {
+        self.currentProfileView.alpha = 1.0;
+        self.nextProfileView.alpha = 1.0;
+        self.emptyLabel.alpha = 0.0;
+    }
 }
 
 - (void)updateProfileView:(MCMatchProfileView *)profileView withUser:(PFUser *)user

@@ -20,11 +20,14 @@
     
     self = views[0];
     self.frame = frame;
+    self.backgroundColor = [UIColor blackColor];
     
     self.imageView.layer.cornerRadius = 0.5 * CGRectGetWidth(self.imageView.bounds);
     self.imageView.layer.masksToBounds = YES;
     self.imageView.layer.borderWidth = 2.0;
     self.imageView.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:0.25].CGColor;
+    
+    self.backgroundImageView.layer.masksToBounds = YES;
     
     return self;
 }

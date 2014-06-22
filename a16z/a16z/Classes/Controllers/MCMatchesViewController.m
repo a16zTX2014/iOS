@@ -57,24 +57,25 @@
 {
     [super viewDidLoad];
     
+    
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.navigationBar.opaque = NO;
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     NSData *imageData = [PFUser currentUser][@"image"];
     UIImageView *backgroundImageView = [[UIImageView alloc]initWithImage:[[UIImage imageWithData:imageData] applyDarkEffect]];
     backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
     backgroundImageView.frame = self.view.frame;
     
-    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0.0, 20.0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - 20.0) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0.0, 64.0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - 64.0) style:UITableViewStylePlain];
     self.tableView.rowHeight = 120;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.backgroundView = backgroundImageView;
     [self.view addSubview:self.tableView];
     
-//    Well I tried..
-//    UIBarButtonItem *helpButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithContentsOfFile:@"help.png"]
-//                                                                   style:UIBarButtonItemStyleDone
-//                                                                  target:self
-//                                                                  action:@selector(helpButtonSelected)];
-    UIBarButtonItem *helpButton = [[UIBarButtonItem alloc] initWithTitle:@"HALP"
+    UIBarButtonItem *helpButton = [[UIBarButtonItem alloc] initWithTitle:@"Help"
                                                                    style:UIBarButtonItemStyleBordered
                                                                   target:self
                                                                   action:@selector(helpButtonSelected)];
@@ -97,6 +98,7 @@
     PFQuery *queryMatcher = [PFQuery queryWithClassName:@"Match"];
     [queryMatchee whereKey:@"matchee" equalTo:[PFUser currentUser]];
     [queryMatcher whereKey:@"matcher" equalTo:[PFUser currentUser]];
+    
     PFQuery *combinedQuery = [PFQuery orQueryWithSubqueries:@[queryMatchee, queryMatcher]];
     [combinedQuery whereKey:@"status" equalTo:@(2)];
     [combinedQuery includeKey:@"matchee"];
