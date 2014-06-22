@@ -22,7 +22,6 @@
     self.frame = frame;
     
     self.imageView.layer.cornerRadius = 0.5 * CGRectGetWidth(self.imageView.bounds);
-    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
     self.imageView.layer.masksToBounds = YES;
     self.imageView.layer.borderWidth = 1.0;
     self.imageView.layer.borderColor = [UIColor colorWithWhite:0.9 alpha:1.0].CGColor;
