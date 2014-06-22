@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MCLoginViewController : UIViewController
+@interface MCLoginViewController : UIViewController <UITextFieldDelegate>
+
+- (IBAction)didTouchUpInsideButton:(UIButton *)sender;
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UIButton *signinButton;
+@property (weak, nonatomic) IBOutlet UIButton *signupButton;
 
 @end
