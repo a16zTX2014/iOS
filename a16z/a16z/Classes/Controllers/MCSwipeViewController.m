@@ -102,6 +102,7 @@
         // Swiping left
         } else if (delta.x < -0.3 * CGRectGetWidth(self.view.bounds)) {
             [UIView animateWithDuration:0.3 animations:^{
+                [self attemptToMatchUser:self.currentMatchUser];
                 self.currentProfileView.frame = CGRectOffset(self.view.bounds, -CGRectGetWidth(self.view.bounds), 0);
                 self.rejectView.alpha = 0.0;
                 self.acceptView.alpha = 0.0;
@@ -121,6 +122,38 @@
             }];
         }
     }
+}
+
+#define kwantsToBeMatched 1
+#define kMatched 2
+- (void) attemptToMatchUser:(PFUser *)user
+{
+    PFQuery *queryWantsToBeMatched = [PFQuery queryWithClassName:@"Match"];
+    [queryWantsToBeMatched whereKey:@"matchee" equalTo:user];
+    [queryWantsToBeMatched whereKey:@"matcher" equalTo:[PFUser currentUser]];
+    [queryWantsToBeMatched whereKey:@"status" equalTo:@1];
+    [queryWantsToBeMatched findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error) {
+            // TODO(matthewe): Maybe you should handle errors yo.
+        } else {
+            if (objects.count > 0) {
+                // TODO(matthewe): You found a person. Should send a push notification?
+                NSLog(@"Wow that user was looking for you. Found you someone.");
+                PFObject *firstMatch = objects[0];
+                firstMatch[@"status"] = @2;
+                [firstMatch saveInBackground];
+            } else {
+                // There are no matches time to create a new match.
+                NSLog(@"That user is not looking. Create match object.");
+                PFObject *newMatch = [PFObject objectWithClassName:@"Match"];
+                newMatch[@"matchee"] = [PFUser currentUser];
+                newMatch[@"matcher"] = user;
+                newMatch[@"status"] = @1;
+                [newMatch saveInBackground];
+            }
+        }
+    }];
+     
 }
 
 - (void)reloadData
