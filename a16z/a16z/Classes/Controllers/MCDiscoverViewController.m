@@ -20,7 +20,6 @@
 
 @implementation MCDiscoverViewController
 
-
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
@@ -40,6 +39,11 @@
     [self addChildViewController:self.swipeViewController];
     [self.swipeViewController didMoveToParentViewController:self];
     
+}
+
+- (MCMatchProfileViewModel *)nextMatchProfileViewModel
+{
+    return nil;
 }
 
 @end
