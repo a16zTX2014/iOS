@@ -8,10 +8,13 @@
 
 #import "MCDiscoverViewController.h"
 #import "MCSwipeViewController.h"
+#import "MBProgressHUD.h"
+#import <Parse/Parse.h>
 
 
 @interface MCDiscoverViewController ()
 
+@property (nonatomic) NSMutableArray *discoverableUsers;
 @property (nonatomic) MCSwipeViewController *swipeViewController;
 
 @end
@@ -39,6 +42,25 @@
     [self addChildViewController:self.swipeViewController];
     [self.swipeViewController didMoveToParentViewController:self];
     
+    MBProgressHUD *HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    HUD.mode = MBProgressHUDModeIndeterminate;
+    HUD.animationType = MBProgressHUDAnimationFade;
+    HUD.labelText = @"Updating";
+    HUD.minShowTime = 1.0;
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"_User"];
+    [query whereKey:@"username" notEqualTo:[PFUser currentUser].username];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        if (objects) {
+            self.discoverableUsers = [objects mutableCopy];
+            [self.swipeViewController reloadData];
+        } else {
+            // fucked up
+        }
+        
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+    }];
 }
 
 - (MCMatchProfileViewModel *)nextMatchProfileViewModel

@@ -7,19 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <Parse/Parse.h>
 
 @class MCMatchProfileViewModel;
 
 @protocol MCSwipeDataSource <NSObject>
 
-- (MCMatchProfileViewModel *)nextMatchProfileViewModel;
+- (PFUser *)nextMatchUser;
 
 @end
 
 
-
 @interface MCSwipeViewController : UIViewController
+
+- (void)reloadData;
 
 @property (nonatomic) id<MCSwipeDataSource> dataSource;
 

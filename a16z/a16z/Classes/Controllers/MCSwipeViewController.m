@@ -111,5 +111,19 @@
     }
 }
 
+- (void)reloadData
+{
+    PFUser *currentMatchUser = [self.dataSource nextMatchUser];
+    PFUser *nextMatchUser = [self.dataSource nextMatchUser];
+    
+    [self updateProfileView:self.currentProfileView withUser:currentMatchUser];
+    [self updateProfileView:self.nextProfileView withUser:nextMatchUser];
+}
+
+- (void)updateProfileView:(MCMatchProfileView *)profileView withUser:(PFUser *)user
+{
+    
+}
+
 
 @end
