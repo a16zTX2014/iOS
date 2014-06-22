@@ -26,10 +26,13 @@
     self.imageView.layer.masksToBounds = YES;
     self.imageView.layer.borderWidth = 2.0;
     self.imageView.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:0.25].CGColor;
+    self.skillsCollectionView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
     
     self.backgroundImageView.layer.masksToBounds = YES;
     
     return self;
 }
+
+
 
 @end

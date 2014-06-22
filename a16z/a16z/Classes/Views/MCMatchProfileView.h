@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *schoolLabel;
+@property (weak, nonatomic) IBOutlet UICollectionView *skillsCollectionView;
 
 @end

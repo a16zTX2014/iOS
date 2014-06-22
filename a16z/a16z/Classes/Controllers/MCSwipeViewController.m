@@ -78,6 +78,52 @@
     [self.view addSubview:self.rejectView];
     [self.view addSubview:self.currentProfileView];
     [self.view addSubview:self.loadingView];
+    
+    self.currentProfileView.skillsCollectionView.dataSource = self;
+    self.nextProfileView.skillsCollectionView.dataSource = self;
+    
+    [self.currentProfileView.skillsCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"yolo"];
+    [self.nextProfileView.skillsCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"yolo"];
+    
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"yo cell for item is getting called");
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"yolo"
+                                                                           forIndexPath:indexPath];
+    if (!cell) {
+        cell = [[UICollectionViewCell alloc] init];
+        UILabel *label = [[UILabel alloc] initWithFrame:cell.contentView.bounds];
+        label.tag = 1;
+        [cell.contentView addSubview:label];
+    }
+    
+    UILabel *label = (UILabel *)[cell.contentView viewWithTag:1];
+    
+    if (collectionView == self.currentProfileView.skillsCollectionView) {
+        NSArray *arr = [self.currentMatchUser valueForKey:@"skills"];
+        label.text = arr[indexPath.row];
+    } else {
+        NSArray *arr = [self.nextMatchUser valueForKey:@"skills"];
+        label.text = arr[indexPath.row];
+    }
+    
+    return cell;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    NSLog(@"yo what is the length of that ish");
+    if (collectionView == self.currentProfileView.skillsCollectionView) {
+        NSArray *arr = [self.currentMatchUser valueForKey:@"skills"];
+        NSLog(@"Length: %d", arr.count);
+        return arr.count;
+    } else {
+        NSArray *arr = [self.nextMatchUser valueForKey:@"skills"];
+        NSLog(@"Length: %d", arr.count);
+        return arr.count;
+    }
 }
 
 - (void)didRecognizePanGesture:(UIPanGestureRecognizer *)gestureRecognizer
@@ -135,7 +181,6 @@
             
         // Let go of swipe early
         } else {
-        
             [UIView animateWithDuration:0.3 animations:^{
                 self.currentProfileView.frame = self.view.frame;
             } completion:^(BOOL finished) {
@@ -236,6 +281,7 @@
         profileView.nameLabel.text = user[@"name"];
         profileView.schoolLabel.text = user[@"school"];
         profileView.backgroundImageView.image = [profileView.imageView.image applyDarkEffect];
+        [profileView.skillsCollectionView reloadData];
     } else {
         profileView.imageView.image = nil;
         profileView.nameLabel.text = nil;
@@ -243,5 +289,7 @@
         profileView.backgroundImageView.image = nil;
     }
 }
+
+
 
 @end

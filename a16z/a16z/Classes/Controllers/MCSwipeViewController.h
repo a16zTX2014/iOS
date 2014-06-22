@@ -17,7 +17,7 @@
 @end
 
 
-@interface MCSwipeViewController : UIViewController
+@interface MCSwipeViewController : UIViewController <UICollectionViewDataSource>
 
 - (void)reloadData;
 
