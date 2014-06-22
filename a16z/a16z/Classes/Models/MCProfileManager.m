@@ -15,8 +15,11 @@
     if (self = [super init]) {
         [self initializeSkills];
         _name = [[NSUserDefaults standardUserDefaults]objectForKey:@"name"];
-        _image = [[NSUserDefaults standardUserDefaults]objectForKey:@"image"];
+        
         _school = [[NSUserDefaults standardUserDefaults]objectForKey:@"school"];
+        
+        NSData *imageData = [[NSUserDefaults standardUserDefaults]objectForKey:@"image"];
+        _image = [NSKeyedUnarchiver unarchiveObjectWithData:imageData];
     }
     return self;
 }
@@ -62,7 +65,8 @@
 - (void)setImage:(UIImage *)image
 {
     _image = image;
-    [[NSUserDefaults standardUserDefaults]setObject:image forKey:@"image"];
+    NSData *imageData = [NSKeyedArchiver archivedDataWithRootObject:image];
+    [[NSUserDefaults standardUserDefaults]setObject:imageData forKey:@"image"];
 }
 
 - (void)setSchool:(NSString *)school
