@@ -18,6 +18,8 @@
         
         _school = [[NSUserDefaults standardUserDefaults]objectForKey:@"school"];
         
+        _phone = [[NSUserDefaults standardUserDefaults]objectForKey:@"phone"];
+        
         NSData *imageData = [[NSUserDefaults standardUserDefaults]objectForKey:@"image"];
         if (imageData) {
             _image = [NSKeyedUnarchiver unarchiveObjectWithData:imageData];
@@ -35,10 +37,16 @@
     }
     if (!_skills) {
         NSMutableDictionary *skills = [NSMutableDictionary new];
-        NSArray *skillList = @[@"iOS"];
+        NSArray *skillList = @[@"Backend",
+                               @"iOS",
+                               @"Frontend",
+                               @"Android",
+                               @"Hardware",
+                               @"Design"];
         for (NSString *skill in skillList) {
             skills[skill] = @(NO);
         }
+        _skills = [skills copy];
     }
 }
 
@@ -76,6 +84,12 @@
 {
     _school = school;
     [[NSUserDefaults standardUserDefaults]setObject:school forKey:@"school"];
+}
+
+- (void)setPhone:(NSString *)phone
+{
+    _phone = phone;
+    [[NSUserDefaults standardUserDefaults]setObject:phone forKey:@"phone"];
 }
 
 - (void)setSkills:(NSDictionary *)skills
