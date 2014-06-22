@@ -78,7 +78,6 @@
 - (PFUser *)nextMatchUser
 {
     PFUser *firstUser = [self.discoverableUsers firstObject];
-    NSLog(@"%@", firstUser);
     if (firstUser) {
         [self.discoverableUsers removeObjectAtIndex:0];
     }

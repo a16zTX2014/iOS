@@ -13,6 +13,9 @@
 
 @property (nonatomic) UIPanGestureRecognizer    *panGestureRecognizer;
 
+@property (nonatomic) PFUser    *currentMatchUser;
+@property (nonatomic) PFUser    *nextMatchUser;
+
 @property (nonatomic) MCMatchProfileView *currentProfileView;
 @property (nonatomic) MCMatchProfileView *nextProfileView;
 
@@ -83,22 +86,29 @@
                gestureRecognizer.state == UIGestureRecognizerStateFailed    ||
                gestureRecognizer.state == UIGestureRecognizerStateEnded) {
         
+        // Swiping right
         if (delta.x > 0.3 * CGRectGetWidth(self.view.bounds)) {
             [UIView animateWithDuration:0.3 animations:^{
                 self.currentProfileView.frame = CGRectOffset(self.view.bounds, CGRectGetWidth(self.view.bounds), 0);
                 self.rejectView.alpha = 0.0;
                 self.acceptView.alpha = 0.0;
             } completion:^(BOOL finished) {
+                [self incrementCurrentMatchUser];
                 self.currentProfileView.frame = self.view.bounds;
             }];
+            
+        // Swiping left
         } else if (delta.x < -0.3 * CGRectGetWidth(self.view.bounds)) {
             [UIView animateWithDuration:0.3 animations:^{
                 self.currentProfileView.frame = CGRectOffset(self.view.bounds, -CGRectGetWidth(self.view.bounds), 0);
                 self.rejectView.alpha = 0.0;
                 self.acceptView.alpha = 0.0;
             } completion:^(BOOL finished) {
+                [self incrementCurrentMatchUser];
                 self.currentProfileView.frame = self.view.bounds;
             }];
+            
+        // Let go of swipe early
         } else {
         
             [UIView animateWithDuration:0.3 animations:^{
@@ -113,11 +123,24 @@
 
 - (void)reloadData
 {
-    PFUser *currentMatchUser = [self.dataSource nextMatchUser];
-    PFUser *nextMatchUser = [self.dataSource nextMatchUser];
+    NSLog(@"reloading data");
     
-    [self updateProfileView:self.currentProfileView withUser:currentMatchUser];
-    [self updateProfileView:self.nextProfileView withUser:nextMatchUser];
+    self.currentMatchUser = [self.dataSource nextMatchUser];
+    self.nextMatchUser = [self.dataSource nextMatchUser];
+    
+    [self updateProfileView:self.currentProfileView withUser:self.currentMatchUser];
+    [self updateProfileView:self.nextProfileView withUser:self.nextMatchUser];
+}
+
+- (void)incrementCurrentMatchUser
+{
+    NSLog(@"incrementing user");
+    
+    self.currentMatchUser = self.nextMatchUser;
+    self.nextMatchUser = [self.dataSource nextMatchUser];
+    
+    [self updateProfileView:self.currentProfileView withUser:self.currentMatchUser];
+    [self updateProfileView:self.nextProfileView withUser:self.nextMatchUser];
 }
 
 - (void)updateProfileView:(MCMatchProfileView *)profileView withUser:(PFUser *)user
@@ -127,7 +150,9 @@
         profileView.nameLabel.text = user[@"name"];
         profileView.schoolLabel.text = user[@"school"];
     } else {
-        // show something
+        profileView.imageView.image = nil;
+        profileView.nameLabel.text = nil;
+        profileView.schoolLabel.text = nil;
     }
 }
 
