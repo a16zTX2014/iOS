@@ -16,6 +16,7 @@
 		934281E519566FF00037454E /* MCPersonalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 934281E319566FF00037454E /* MCPersonalViewController.xib */; };
 		934281EE195672200037454E /* MCSkillsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 934281EC195672200037454E /* MCSkillsViewController.m */; };
 		934281EF195672200037454E /* MCSkillsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 934281ED195672200037454E /* MCSkillsViewController.xib */; };
+		934281FA19568DC60037454E /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 934281F919568DC60037454E /* camera.png */; };
 		DD3F003D1956768F002A2C24 /* MCProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3F003C1956768F002A2C24 /* MCProfileManager.m */; };
 		DD3F003F19568CA1002A2C24 /* MCMatchProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3F003E19568CA1002A2C24 /* MCMatchProfileView.xib */; };
 		DD3F004519568F6F002A2C24 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3F004419568F6F002A2C24 /* FacebookSDK.framework */; };
@@ -59,6 +60,7 @@
 		934281EB195672200037454E /* MCSkillsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCSkillsViewController.h; path = Classes/Controllers/MCSkillsViewController.h; sourceTree = "<group>"; };
 		934281EC195672200037454E /* MCSkillsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCSkillsViewController.m; path = Classes/Controllers/MCSkillsViewController.m; sourceTree = "<group>"; };
 		934281ED195672200037454E /* MCSkillsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MCSkillsViewController.xib; path = Classes/Controllers/MCSkillsViewController.xib; sourceTree = "<group>"; };
+		934281F919568DC60037454E /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		9A5838A15BD240C386E9EF3A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		DD3F003B1956768F002A2C24 /* MCProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCProfileManager.h; path = Classes/Models/MCProfileManager.h; sourceTree = "<group>"; };
 		DD3F003C1956768F002A2C24 /* MCProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCProfileManager.m; path = Classes/Models/MCProfileManager.m; sourceTree = "<group>"; };
@@ -127,14 +129,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		934281D3195644D70037454E /* xib */ = {
-			isa = PBXGroup;
-			children = (
-				934281D0195644BF0037454E /* MCLoginViewController.xib */,
-			);
-			name = xib;
-			sourceTree = "<group>";
-		};
 		934281F0195672240037454E /* MCSkills */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +180,7 @@
 		934281F51956724E0037454E /* MCLogin */ = {
 			isa = PBXGroup;
 			children = (
+				934281D0195644BF0037454E /* MCLoginViewController.xib */,
 				934281CE195644BF0037454E /* MCLoginViewController.h */,
 				934281CF195644BF0037454E /* MCLoginViewController.m */,
 			);
@@ -208,6 +203,14 @@
 				DD9779BD195642FC00B2504D /* MCDiscoverViewController.m */,
 			);
 			name = MCDiscover;
+			sourceTree = "<group>";
+		};
+		934281F819568DB40037454E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				934281F919568DC60037454E /* camera.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		DD97797C19563FFC00B2504D = {
@@ -276,7 +279,6 @@
 		DD9779B71956402400B2504D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				934281D3195644D70037454E /* xib */,
 				DD97799719563FFC00B2504D /* MCAppDelegate.h */,
 				DD97799819563FFC00B2504D /* MCAppDelegate.m */,
 				DD9779BA1956403000B2504D /* Controllers */,
@@ -323,6 +325,7 @@
 		DD9779BB1956403F00B2504D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				934281F819568DB40037454E /* Images */,
 				DD97799A19563FFC00B2504D /* Images.xcassets */,
 			);
 			name = Resources;
@@ -387,6 +390,7 @@
 				934281D2195644BF0037454E /* MCLoginViewController.xib in Resources */,
 				DD97799B19563FFC00B2504D /* Images.xcassets in Resources */,
 				DD3F003F19568CA1002A2C24 /* MCMatchProfileView.xib in Resources */,
+				934281FA19568DC60037454E /* camera.png in Resources */,
 				934281E019566B430037454E /* MCWelcomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
