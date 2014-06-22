@@ -22,6 +22,7 @@
 		DD3F004519568F6F002A2C24 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3F004419568F6F002A2C24 /* FacebookSDK.framework */; };
 		DD3F004719568F7D002A2C24 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3F004619568F7D002A2C24 /* Social.framework */; };
 		DD3F004919568F83002A2C24 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3F004819568F83002A2C24 /* Accounts.framework */; };
+		DD3F004D1956B318002A2C24 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3F004C1956B318002A2C24 /* UIImage+ImageEffects.m */; };
 		DD97798919563FFC00B2504D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97798819563FFC00B2504D /* Foundation.framework */; };
 		DD97798B19563FFC00B2504D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97798A19563FFC00B2504D /* CoreGraphics.framework */; };
 		DD97798D19563FFC00B2504D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97798C19563FFC00B2504D /* UIKit.framework */; };
@@ -68,6 +69,8 @@
 		DD3F004419568F6F002A2C24 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		DD3F004619568F7D002A2C24 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		DD3F004819568F83002A2C24 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		DD3F004B1956B318002A2C24 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		DD3F004C1956B318002A2C24 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		DD97798519563FFC00B2504D /* a16z.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = a16z.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD97798819563FFC00B2504D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DD97798A19563FFC00B2504D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -291,6 +294,8 @@
 		DD9779B81956402800B2504D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DD3F004B1956B318002A2C24 /* UIImage+ImageEffects.h */,
+				DD3F004C1956B318002A2C24 /* UIImage+ImageEffects.m */,
 				DD3F003B1956768F002A2C24 /* MCProfileManager.h */,
 				DD3F003C1956768F002A2C24 /* MCProfileManager.m */,
 			);
@@ -436,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				934281EE195672200037454E /* MCSkillsViewController.m in Sources */,
+				DD3F004D1956B318002A2C24 /* UIImage+ImageEffects.m in Sources */,
 				934281E419566FF00037454E /* MCPersonalViewController.m in Sources */,
 				DD9779E119564D2700B2504D /* MCMatchProfileView.m in Sources */,
 				934281DF19566B430037454E /* MCWelcomeViewController.m in Sources */,
