@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *schoolLabel;
 @property (weak, nonatomic) IBOutlet UIButton *callButton;
 @property (weak, nonatomic) IBOutlet UIButton *textButton;
+@property (weak, nonatomic) NSString *phoneNumber;
 
 @end

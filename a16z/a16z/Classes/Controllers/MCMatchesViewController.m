@@ -99,6 +99,7 @@
     cell.nameLabel.text = user[@"name"];
     cell.schoolLabel.text = user[@"school"];
     cell.profileImageView.image = [UIImage imageWithData:user[@"image"]];
+    cell.phoneNumber = user[@"phone"];
     return cell;
 }
 

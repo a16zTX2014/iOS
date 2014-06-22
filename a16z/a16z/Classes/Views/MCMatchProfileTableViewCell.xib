@@ -50,6 +50,9 @@
                             <color key="titleColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="callButtonSelected:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xIp-cb-BRL"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0U-I7-qM1">
                         <rect key="frame" x="236" y="75" width="64" height="30"/>
