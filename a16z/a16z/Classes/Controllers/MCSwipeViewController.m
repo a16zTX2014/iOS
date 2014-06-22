@@ -123,8 +123,6 @@
 
 - (void)reloadData
 {
-    NSLog(@"reloading data");
-    
     self.currentMatchUser = [self.dataSource nextMatchUser];
     self.nextMatchUser = [self.dataSource nextMatchUser];
     
@@ -134,8 +132,6 @@
 
 - (void)incrementCurrentMatchUser
 {
-    NSLog(@"incrementing user");
-    
     self.currentMatchUser = self.nextMatchUser;
     self.nextMatchUser = [self.dataSource nextMatchUser];
     
@@ -155,6 +151,5 @@
         profileView.schoolLabel.text = nil;
     }
 }
-
 
 @end
