@@ -41,7 +41,18 @@
     [self.view addSubview:self.swipeViewController.view];
     [self addChildViewController:self.swipeViewController];
     [self.swipeViewController didMoveToParentViewController:self];
-    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if ([PFUser currentUser] && ![self.discoverableUsers count]) {
+        [self fetchDiscoverableUsers];
+    }
+}
+
+- (void)fetchDiscoverableUsers
+{
     MBProgressHUD *HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     HUD.mode = MBProgressHUDModeIndeterminate;
     HUD.animationType = MBProgressHUDAnimationFade;
