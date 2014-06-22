@@ -44,7 +44,7 @@
                 [skillz addObject:key];
             }
         }
-        currentUser[@"skiils"] = [NSArray arrayWithArray:skillz];
+        currentUser[@"skills"] = [NSArray arrayWithArray:skillz];
         [currentUser saveInBackground];
         
         [self.navigationController.presentingViewController dismissViewControllerAnimated:YES
