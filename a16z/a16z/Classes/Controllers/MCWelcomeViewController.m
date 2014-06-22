@@ -28,6 +28,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor colorWithRed:52/255.0
+                                                green:152/255.0
+                                                 blue:219/255.0
+                                                alpha:1.0];
+    self.nextButton.backgroundColor = [UIColor colorWithRed:41/255.0
+                                                      green:128/255.0
+                                                       blue:185/255.0
+                                                      alpha:1.0];
+    [self.nextButton setTitleColor:[UIColor colorWithRed:1.0
+                             green:1.0
+                              blue:1.0
+                             alpha:0.5]
+                          forState:UIControlStateNormal];
     self.nextButton.enabled = NO;
 }
 
@@ -56,6 +70,11 @@
     [picker dismissViewControllerAnimated:YES completion:nil];
     
     self.nextButton.enabled = YES;
+    [self.nextButton setTitleColor:[UIColor colorWithRed:1.0
+                             green:1.0
+                              blue:1.0
+                             alpha:1.0]
+                          forState:UIControlStateNormal];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
