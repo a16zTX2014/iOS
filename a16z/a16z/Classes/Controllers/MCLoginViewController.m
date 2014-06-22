@@ -32,16 +32,19 @@
     self.usernameTextField.delegate = self;
     self.passwordTextField.delegate = self;
     
+    [self.signinButton setEnabled:NO];
+    [self.signupButton setEnabled:NO];
+    
     // SigninButton Styling
     self.signinButton.backgroundColor = [UIColor colorWithRed:8/255.0
-                                                        green:60/255.0                                                blue:188/255.0                                 alpha:.75];
+                                                        green:60/255.0                                                blue:188/255.0                                 alpha:.2];
     self.signinButton.layer.cornerRadius = 10;
     [self.signinButton setTitleColor:[UIColor whiteColor]
                             forState:UIControlStateNormal];
     
     // SignupButton Styling
     self.signupButton.backgroundColor = [UIColor colorWithRed:216/255.0
-                                                        green:27/255.0                                               blue:20/255.0                                 alpha:.75];
+                                                        green:27/255.0                                               blue:20/255.0                                 alpha:.2];
     self.signupButton.layer.cornerRadius = 10;
     [self.signupButton setTitleColor:[UIColor whiteColor]
                             forState:UIControlStateNormal];
@@ -51,6 +54,45 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.view endEditing:YES];
+}
+
+- (IBAction)didChangeUsernameField:(id)sender {
+    NSString *usernameText = self.usernameTextField.text;
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"_User"];
+    [query whereKey:@"username" equalTo:usernameText];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            if (objects.count > 0) {
+                [self highlightSignin];
+            } else {
+                [self highlightSignup];
+            }
+        } else {
+            // TODO(matthewe): Fuck this failed. What should we do?
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+}
+
+- (void) highlightSignin
+{
+    [self.signinButton setEnabled:YES];
+    self.signinButton.backgroundColor = [UIColor colorWithRed:8/255.0
+                                                        green:60/255.0                                                blue:188/255.0                                 alpha:.7];
+    [self.signupButton setEnabled:YES];
+    self.signupButton.backgroundColor = [UIColor colorWithRed:216/255.0
+                                                        green:27/255.0                                               blue:20/255.0                                 alpha:.2];
+}
+
+- (void) highlightSignup
+{
+    [self.signinButton setEnabled:NO];
+    self.signinButton.backgroundColor = [UIColor colorWithRed:8/255.0
+                                                        green:60/255.0                                                blue:188/255.0                                 alpha:.2];
+    [self.signupButton setEnabled:YES];
+    self.signupButton.backgroundColor = [UIColor colorWithRed:216/255.0
+                                                        green:27/255.0                                               blue:20/255.0                                 alpha:.7];
 }
 
 - (IBAction)didTouchUpInsideButton:(UIButton *)sender {
