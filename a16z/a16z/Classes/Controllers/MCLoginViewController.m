@@ -182,6 +182,8 @@
 {
     // TODO(matthewe): Present the next stuff because the magic happened.
     NSLog(@"Present the next stuff. You should probably do this.");
+    [self.presentingViewController dismissViewControllerAnimated:YES
+                                                      completion:nil];
 }
 
 - (void) displayAlert:(NSString *)alertMessage
