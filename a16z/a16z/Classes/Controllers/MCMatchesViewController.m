@@ -34,6 +34,12 @@
     [super viewDidLoad];
     
     self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    self.tableView.backgroundView = ({
+        UIView *view = [UIView new];
+        view.backgroundColor = [UIColor whiteColor];
+        view;
+    });
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
@@ -57,6 +63,8 @@
     [queryMatcher whereKey:@"matcher" equalTo:[PFUser currentUser]];
     PFQuery *combinedQuery = [PFQuery orQueryWithSubqueries:@[queryMatchee, queryMatcher]];
     [combinedQuery whereKey:@"status" equalTo:@(2)];
+    [combinedQuery includeKey:@"matchee"];
+    [combinedQuery includeKey:@"matcher"];
     [combinedQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         
         if (objects) {

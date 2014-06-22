@@ -6,47 +6,33 @@
 	<dict>
 		<key>Pods-CRToast.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2A080F567E134C3CA1BA20E6</key>
+		<key>3EEADDFF7A744B39B5B07F82</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>361458D1465047C892F6991C</key>
+		<key>430AA61C5D8C495BAE766AA6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9270AF18F5CE4EDAAB5CA0B4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E0808AE9679645D9A2A15A72</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EC6C743FC9E04237ADCAC631</key>
+		<key>7BC0ABE808034255B0D4A1F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -10,7 +10,8 @@
 
 typedef NS_ENUM(NSInteger, MCProfileEditType) {
     MCProfileEditNameType = 0,
-    MCProfileEditSchoolType
+    MCProfileEditSchoolType,
+    MCProfileEditPhoneType
 };
 
 
