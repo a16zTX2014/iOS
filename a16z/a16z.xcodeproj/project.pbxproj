@@ -15,6 +15,7 @@
 		934281E519566FF00037454E /* MCPersonalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 934281E319566FF00037454E /* MCPersonalViewController.xib */; };
 		934281EE195672200037454E /* MCSkillsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 934281EC195672200037454E /* MCSkillsViewController.m */; };
 		934281EF195672200037454E /* MCSkillsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 934281ED195672200037454E /* MCSkillsViewController.xib */; };
+		DD3F003D1956768F002A2C24 /* MCProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3F003C1956768F002A2C24 /* MCProfileManager.m */; };
 		DD97798919563FFC00B2504D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97798819563FFC00B2504D /* Foundation.framework */; };
 		DD97798B19563FFC00B2504D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97798A19563FFC00B2504D /* CoreGraphics.framework */; };
 		DD97798D19563FFC00B2504D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97798C19563FFC00B2504D /* UIKit.framework */; };
@@ -53,6 +54,8 @@
 		934281EB195672200037454E /* MCSkillsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCSkillsViewController.h; path = Classes/Controllers/MCSkillsViewController.h; sourceTree = "<group>"; };
 		934281EC195672200037454E /* MCSkillsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCSkillsViewController.m; path = Classes/Controllers/MCSkillsViewController.m; sourceTree = "<group>"; };
 		934281ED195672200037454E /* MCSkillsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MCSkillsViewController.xib; path = Classes/Controllers/MCSkillsViewController.xib; sourceTree = "<group>"; };
+		DD3F003B1956768F002A2C24 /* MCProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCProfileManager.h; path = Classes/Models/MCProfileManager.h; sourceTree = "<group>"; };
+		DD3F003C1956768F002A2C24 /* MCProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCProfileManager.m; path = Classes/Models/MCProfileManager.m; sourceTree = "<group>"; };
 		DD97798519563FFC00B2504D /* a16z.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = a16z.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD97798819563FFC00B2504D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DD97798A19563FFC00B2504D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -271,6 +274,8 @@
 			children = (
 				DD9779E2195658EA00B2504D /* MCMatchProfileViewModel.h */,
 				DD9779E3195658EA00B2504D /* MCMatchProfileViewModel.m */,
+				DD3F003B1956768F002A2C24 /* MCProfileManager.h */,
+				DD3F003C1956768F002A2C24 /* MCProfileManager.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -384,6 +389,7 @@
 				DD9779DE19564C4D00B2504D /* MCSwipeViewController.m in Sources */,
 				934281D1195644BF0037454E /* MCLoginViewController.m in Sources */,
 				DD9779C7195645C200B2504D /* MCMatchesViewController.m in Sources */,
+				DD3F003D1956768F002A2C24 /* MCProfileManager.m in Sources */,
 				DD9779E4195658EA00B2504D /* MCMatchProfileViewModel.m in Sources */,
 				DD9779BE195642FC00B2504D /* MCDiscoverViewController.m in Sources */,
 			);
