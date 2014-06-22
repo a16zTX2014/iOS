@@ -8,6 +8,7 @@
 
 #import <Parse/Parse.h>
 #import "MCLoginViewController.h"
+#import "MCWelcomeViewController.h"
 
 @interface MCLoginViewController ()
 
@@ -27,6 +28,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    // Hide that shit yo
+    self.navigationController.navigationBarHidden = YES;
     
     // Delegate shit
     self.usernameTextField.delegate = self;
@@ -168,15 +172,14 @@
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             // Hooray! Let them use the app now.
-            [self loginOrSignupSuccessful];
-            NSLog(@"Log in successful");
+            MCWelcomeViewController *welcomeViewController = [[MCWelcomeViewController alloc] init];
+            [self.navigationController pushViewController:welcomeViewController animated:YES];
         } else {
             NSString *errorString = [error userInfo][@"error"];
             [self displayAlert:errorString];
         }
     }];
 }
-
 
 - (void) loginOrSignupSuccessful
 {

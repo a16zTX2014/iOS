@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		934281D1195644BF0037454E /* MCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 934281CF195644BF0037454E /* MCLoginViewController.m */; };
 		934281D2195644BF0037454E /* MCLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 934281D0195644BF0037454E /* MCLoginViewController.xib */; };
+		934281DF19566B430037454E /* MCWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 934281DD19566B430037454E /* MCWelcomeViewController.m */; };
+		934281E019566B430037454E /* MCWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 934281DE19566B430037454E /* MCWelcomeViewController.xib */; };
+		934281E419566FF00037454E /* MCPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 934281E219566FF00037454E /* MCPersonalViewController.m */; };
+		934281E519566FF00037454E /* MCPersonalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 934281E319566FF00037454E /* MCPersonalViewController.xib */; };
+		934281EE195672200037454E /* MCSkillsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 934281EC195672200037454E /* MCSkillsViewController.m */; };
+		934281EF195672200037454E /* MCSkillsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 934281ED195672200037454E /* MCSkillsViewController.xib */; };
 		DD97798919563FFC00B2504D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97798819563FFC00B2504D /* Foundation.framework */; };
 		DD97798B19563FFC00B2504D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97798A19563FFC00B2504D /* CoreGraphics.framework */; };
 		DD97798D19563FFC00B2504D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97798C19563FFC00B2504D /* UIKit.framework */; };
@@ -38,6 +44,15 @@
 		934281CE195644BF0037454E /* MCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCLoginViewController.h; path = Classes/Controllers/MCLoginViewController.h; sourceTree = "<group>"; };
 		934281CF195644BF0037454E /* MCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCLoginViewController.m; path = Classes/Controllers/MCLoginViewController.m; sourceTree = "<group>"; };
 		934281D0195644BF0037454E /* MCLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MCLoginViewController.xib; path = Classes/Controllers/MCLoginViewController.xib; sourceTree = "<group>"; };
+		934281DC19566B430037454E /* MCWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCWelcomeViewController.h; path = Classes/Controllers/MCWelcomeViewController.h; sourceTree = "<group>"; };
+		934281DD19566B430037454E /* MCWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCWelcomeViewController.m; path = Classes/Controllers/MCWelcomeViewController.m; sourceTree = "<group>"; };
+		934281DE19566B430037454E /* MCWelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MCWelcomeViewController.xib; path = Classes/Controllers/MCWelcomeViewController.xib; sourceTree = "<group>"; };
+		934281E119566FF00037454E /* MCPersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCPersonalViewController.h; path = Classes/Controllers/MCPersonalViewController.h; sourceTree = "<group>"; };
+		934281E219566FF00037454E /* MCPersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCPersonalViewController.m; path = Classes/Controllers/MCPersonalViewController.m; sourceTree = "<group>"; };
+		934281E319566FF00037454E /* MCPersonalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MCPersonalViewController.xib; path = Classes/Controllers/MCPersonalViewController.xib; sourceTree = "<group>"; };
+		934281EB195672200037454E /* MCSkillsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCSkillsViewController.h; path = Classes/Controllers/MCSkillsViewController.h; sourceTree = "<group>"; };
+		934281EC195672200037454E /* MCSkillsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCSkillsViewController.m; path = Classes/Controllers/MCSkillsViewController.m; sourceTree = "<group>"; };
+		934281ED195672200037454E /* MCSkillsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MCSkillsViewController.xib; path = Classes/Controllers/MCSkillsViewController.xib; sourceTree = "<group>"; };
 		DD97798519563FFC00B2504D /* a16z.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = a16z.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD97798819563FFC00B2504D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DD97798A19563FFC00B2504D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -103,6 +118,81 @@
 				934281D0195644BF0037454E /* MCLoginViewController.xib */,
 			);
 			name = xib;
+			sourceTree = "<group>";
+		};
+		934281F0195672240037454E /* MCSkills */ = {
+			isa = PBXGroup;
+			children = (
+				934281EB195672200037454E /* MCSkillsViewController.h */,
+				934281EC195672200037454E /* MCSkillsViewController.m */,
+				934281ED195672200037454E /* MCSkillsViewController.xib */,
+			);
+			name = MCSkills;
+			sourceTree = "<group>";
+		};
+		934281F1195672320037454E /* MCPersonal */ = {
+			isa = PBXGroup;
+			children = (
+				934281E119566FF00037454E /* MCPersonalViewController.h */,
+				934281E219566FF00037454E /* MCPersonalViewController.m */,
+				934281E319566FF00037454E /* MCPersonalViewController.xib */,
+			);
+			name = MCPersonal;
+			sourceTree = "<group>";
+		};
+		934281F21956723B0037454E /* MCWelcome */ = {
+			isa = PBXGroup;
+			children = (
+				934281DC19566B430037454E /* MCWelcomeViewController.h */,
+				934281DD19566B430037454E /* MCWelcomeViewController.m */,
+				934281DE19566B430037454E /* MCWelcomeViewController.xib */,
+			);
+			name = MCWelcome;
+			sourceTree = "<group>";
+		};
+		934281F3195672420037454E /* MCSwipe */ = {
+			isa = PBXGroup;
+			children = (
+				DD9779DC19564C4D00B2504D /* MCSwipeViewController.h */,
+				DD9779DD19564C4D00B2504D /* MCSwipeViewController.m */,
+			);
+			name = MCSwipe;
+			sourceTree = "<group>";
+		};
+		934281F4195672470037454E /* MCMatches */ = {
+			isa = PBXGroup;
+			children = (
+				DD9779C5195645C200B2504D /* MCMatchesViewController.h */,
+				DD9779C6195645C200B2504D /* MCMatchesViewController.m */,
+			);
+			name = MCMatches;
+			sourceTree = "<group>";
+		};
+		934281F51956724E0037454E /* MCLogin */ = {
+			isa = PBXGroup;
+			children = (
+				934281CE195644BF0037454E /* MCLoginViewController.h */,
+				934281CF195644BF0037454E /* MCLoginViewController.m */,
+			);
+			name = MCLogin;
+			sourceTree = "<group>";
+		};
+		934281F6195672580037454E /* MCProfile */ = {
+			isa = PBXGroup;
+			children = (
+				DD9779BF1956439200B2504D /* MCProfileViewController.h */,
+				DD9779C01956439200B2504D /* MCProfileViewController.m */,
+			);
+			name = MCProfile;
+			sourceTree = "<group>";
+		};
+		934281F71956725C0037454E /* MCDiscover */ = {
+			isa = PBXGroup;
+			children = (
+				DD9779BC195642FC00B2504D /* MCDiscoverViewController.h */,
+				DD9779BD195642FC00B2504D /* MCDiscoverViewController.m */,
+			);
+			name = MCDiscover;
 			sourceTree = "<group>";
 		};
 		DD97797C19563FFC00B2504D = {
@@ -197,16 +287,14 @@
 		DD9779BA1956403000B2504D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DD9779BC195642FC00B2504D /* MCDiscoverViewController.h */,
-				DD9779BD195642FC00B2504D /* MCDiscoverViewController.m */,
-				DD9779BF1956439200B2504D /* MCProfileViewController.h */,
-				DD9779C01956439200B2504D /* MCProfileViewController.m */,
-				934281CE195644BF0037454E /* MCLoginViewController.h */,
-				934281CF195644BF0037454E /* MCLoginViewController.m */,
-				DD9779C5195645C200B2504D /* MCMatchesViewController.h */,
-				DD9779C6195645C200B2504D /* MCMatchesViewController.m */,
-				DD9779DC19564C4D00B2504D /* MCSwipeViewController.h */,
-				DD9779DD19564C4D00B2504D /* MCSwipeViewController.m */,
+				934281F71956725C0037454E /* MCDiscover */,
+				934281F6195672580037454E /* MCProfile */,
+				934281F51956724E0037454E /* MCLogin */,
+				934281F4195672470037454E /* MCMatches */,
+				934281F3195672420037454E /* MCSwipe */,
+				934281F21956723B0037454E /* MCWelcome */,
+				934281F1195672320037454E /* MCPersonal */,
+				934281F0195672240037454E /* MCSkills */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -270,9 +358,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				934281EF195672200037454E /* MCSkillsViewController.xib in Resources */,
 				DD97799319563FFC00B2504D /* InfoPlist.strings in Resources */,
+				934281E519566FF00037454E /* MCPersonalViewController.xib in Resources */,
 				934281D2195644BF0037454E /* MCLoginViewController.xib in Resources */,
 				DD97799B19563FFC00B2504D /* Images.xcassets in Resources */,
+				934281E019566B430037454E /* MCWelcomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +374,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				934281EE195672200037454E /* MCSkillsViewController.m in Sources */,
+				934281E419566FF00037454E /* MCPersonalViewController.m in Sources */,
 				DD9779E119564D2700B2504D /* MCMatchProfileView.m in Sources */,
+				934281DF19566B430037454E /* MCWelcomeViewController.m in Sources */,
 				DD9779C11956439200B2504D /* MCProfileViewController.m in Sources */,
 				DD97799919563FFC00B2504D /* MCAppDelegate.m in Sources */,
 				DD97799519563FFC00B2504D /* main.m in Sources */,

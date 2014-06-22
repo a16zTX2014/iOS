@@ -18,6 +18,7 @@
 
 @interface MCAppDelegate ()
 
+@property (nonatomic) UINavigationController *navigationController;
 @property (nonatomic) UITabBarController *tabBarController;
 
 @end
@@ -47,8 +48,10 @@
     [self.window makeKeyAndVisible];
     
     if (![PFUser currentUser]) {
+
         MCLoginViewController *loginViewController = [[MCLoginViewController alloc] init];
-        [self.tabBarController presentViewController:loginViewController
+        self.navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+        [self.tabBarController presentViewController:self.navigationController
                                             animated:YES
                                           completion:nil];
     }
