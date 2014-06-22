@@ -7,11 +7,14 @@
 //
 
 #import "MCProfileViewController.h"
+#import "MCProfileEditViewController.h"
 #import <Parse/Parse.h>
 
 @interface MCProfileViewController ()
 
 @property (nonatomic) UITableView *tableView;
+
+@property (nonatomic) MCProfileEditViewController *editViewController;
 
 @end
 
@@ -28,6 +31,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.navigationController.navigationBarHidden = YES;
     
     NSData *imageData = [PFUser currentUser][@"image"];
     
@@ -48,6 +53,12 @@
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
 
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -83,6 +94,25 @@
         return @"Basic Information";
     }
     return nil;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (!self.editViewController) {
+        self.editViewController = [MCProfileEditViewController new];
+    }
+    
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            self.editViewController.editType = MCProfileEditNameType;
+        } else if (indexPath.row == 1) {
+            self.editViewController.editType = MCProfileEditSchoolType;
+        }
+    }
+    
+    [self.navigationController pushViewController:self.editViewController animated:YES];
 }
 
 
