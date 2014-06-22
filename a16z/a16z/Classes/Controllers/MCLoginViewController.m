@@ -58,6 +58,33 @@
                                                                                tintColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:.2] saturationDeltaFactor:1.5
                                                                                maskImage:nil];
     
+    [self.usernameTextField setValue:[UIColor colorWithRed:1.0
+                                                     green:1.0
+                                                      blue:1.0
+                                                     alpha:.6]
+                          forKeyPath:@"_placeholderLabel.textColor"];
+    [self.passwordTextField setValue:[UIColor colorWithRed:1.0
+                                                     green:1.0
+                                                      blue:1.0
+                                                     alpha:.6]
+                          forKeyPath:@"_placeholderLabel.textColor"];
+    
+    self.backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"umad.jpg"]];
+    self.backgroundImageView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    self.backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.backgroundImageView.image = [self.backgroundImageView.image applyBlurWithRadius:10
+                                              tintColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:.5]
+                                  saturationDeltaFactor:1.0
+                                              maskImage:nil];
+    [self.view insertSubview:self.backgroundImageView atIndex:0];
+    
+    // Circle stuff
+    self.logoBackgroundImageView.backgroundColor = [UIColor colorWithRed:1.0
+                                                         green:1.0
+                                                          blue:1.0
+                                                         alpha:.05];
+    self.logoBackgroundImageView.layer.cornerRadius = 72.5;
+    
 }
 
 
