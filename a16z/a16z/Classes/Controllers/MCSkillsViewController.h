@@ -12,4 +12,13 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
 
+@property (weak, nonatomic) IBOutlet UIButton *backendButton;
+@property (weak, nonatomic) IBOutlet UIButton *iOSButton;
+@property (weak, nonatomic) IBOutlet UIButton *frontendButton;
+@property (weak, nonatomic) IBOutlet UIButton *androidButton;
+@property (weak, nonatomic) IBOutlet UIButton *hardwareButton;
+@property (weak, nonatomic) IBOutlet UIButton *designButton;
+
+@property (weak, nonatomic) UIColor *backgroundColor;
+
 @end

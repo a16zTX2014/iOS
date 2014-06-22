@@ -31,12 +31,34 @@
     self.nameTextField.delegate = self;
     self.schoolTextField.delegate = self;
     
+    self.view.backgroundColor = [UIColor colorWithRed:46/255.0
+                                                green:204/255.0
+                                                 blue:113/255.0
+                                                alpha:1.0];
+    self.nextButton.backgroundColor = [UIColor colorWithRed:39/255.0
+                                                      green:174/255.0
+                                                       blue:96/255.0
+                                                      alpha:1.0];
+    UIColor *placeholderColor = [UIColor colorWithRed:1.0
+                                                green:1.0
+                                                 blue:1.0
+                                                alpha:0.5];
+    
+    // Really wanted to change the placeholder text color. Don't try this at home.
+    [self.nameTextField setValue:placeholderColor
+                      forKeyPath:@"_placeholderLabel.textColor"];
+    [self.schoolTextField setValue:placeholderColor
+                      forKeyPath:@"_placeholderLabel.textColor"];
+    [self.phoneTextField setValue:placeholderColor
+                      forKeyPath:@"_placeholderLabel.textColor"];
+
 }
 
 - (IBAction)didTouchUpInsideButton:(id)sender {
     if (sender == self.nextButton) {
         [MCProfileManager sharedManager].name = self.nameTextField.text;
         [MCProfileManager sharedManager].school = self.schoolTextField.text;
+        [MCProfileManager sharedManager].phone = self.phoneTextField.text;
 
         MCSkillsViewController *skillsViewController = [[MCSkillsViewController alloc] init];
         [self.navigationController pushViewController:skillsViewController animated:YES];
@@ -53,7 +75,9 @@
     if(textField == self.nameTextField) {
         [self.schoolTextField becomeFirstResponder];
     } else if (textField == self.schoolTextField) {
-        [self.schoolTextField resignFirstResponder];
+        [self.phoneTextField becomeFirstResponder];
+    } else if (textField == self.phoneTextField) { 
+        [self.phoneTextField resignFirstResponder];
     }
     return YES;
 }
