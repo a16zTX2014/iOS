@@ -10,4 +10,6 @@
 
 @interface MCSkillsViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
+
 @end
