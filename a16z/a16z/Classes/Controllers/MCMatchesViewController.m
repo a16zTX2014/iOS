@@ -9,6 +9,7 @@
 #import "MCMatchesViewController.h"
 #import <Parse/Parse.h>
 #import "MBProgressHUD.h"
+#import "MCMatchProfileTableViewCell.h"
 
 
 @interface MCMatchesViewController ()
@@ -33,13 +34,8 @@
 {
     [super viewDidLoad];
     
-    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-    self.tableView.backgroundView = ({
-        UIView *view = [UIView new];
-        view.backgroundColor = [UIColor whiteColor];
-        view;
-    });
-    
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0.0, 20.0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - 20.0) style:UITableViewStylePlain];
+    self.tableView.rowHeight = 120;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
@@ -89,29 +85,26 @@
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (MCMatchProfileTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MatchesTableViewCell"];
+    MCMatchProfileTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MatchesTableViewCell"];
     if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"MatchesTableViewCell"];
+        NSArray *views = [[NSBundle mainBundle]loadNibNamed:@"MCMatchProfileTableViewCell" owner:nil options:nil];
+        if ([views count] > 0) {
+            cell = views[0];
+        }
     }
     
-    PFUser *user = self.matches[indexPath.section];
-    cell.textLabel.text = user[@"name"];
-    cell.detailTextLabel.text = user[@"school"];
-    cell.imageView.image = [UIImage imageWithData:user[@"image"]];
-    cell.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    PFUser *user = self.matches[indexPath.row];
+    cell.nameLabel.text = user[@"name"];
+    cell.schoolLabel.text = user[@"school"];
+    cell.profileImageView.image = [UIImage imageWithData:user[@"image"]];
     return cell;
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return [self.matches count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return [self.matches count];
 }
 
 

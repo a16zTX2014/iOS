@@ -47,7 +47,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    [UITabBar appearance].tintColor = [UIColor redColor];
+    [UITabBar appearance].tintColor = [UIColor orangeColor];
     [UITabBar appearance].barTintColor = [UIColor whiteColor];
     
     if (![PFUser currentUser]) {
