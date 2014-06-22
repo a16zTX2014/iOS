@@ -27,6 +27,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.nameTextField.delegate = self;
+    self.schoolTextField.delegate = self;
     
 }
 
@@ -37,5 +39,19 @@
     }
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if(textField == self.nameTextField) {
+        [self.schoolTextField becomeFirstResponder];
+    } else if (textField == self.schoolTextField) {
+        [self.schoolTextField resignFirstResponder];
+    }
+    return YES;
+}
 
 @end
