@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MCPersonalViewController : UIViewController
+@interface MCPersonalViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *schoolTextField;
