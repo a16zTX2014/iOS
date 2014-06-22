@@ -16,6 +16,6 @@
 @property (nonatomic) UIImage       *image;
 @property (nonatomic) NSString      *school;
 @property (nonatomic) NSString      *phone;
-@property (nonatomic) NSDictionary  *skills;
+@property (nonatomic, copy) NSDictionary  *skills;
 
 @end

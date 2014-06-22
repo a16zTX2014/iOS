@@ -8,6 +8,8 @@
 
 #import "MCSwipeViewController.h"
 #import "MCMatchProfileView.h"
+#import "UIImage+ImageEffects.h"
+
 
 @interface MCSwipeViewController ()
 
@@ -123,8 +125,6 @@
 
 - (void)reloadData
 {
-    NSLog(@"reloading data");
-    
     self.currentMatchUser = [self.dataSource nextMatchUser];
     self.nextMatchUser = [self.dataSource nextMatchUser];
     
@@ -134,8 +134,6 @@
 
 - (void)incrementCurrentMatchUser
 {
-    NSLog(@"incrementing user");
-    
     self.currentMatchUser = self.nextMatchUser;
     self.nextMatchUser = [self.dataSource nextMatchUser];
     
@@ -155,6 +153,5 @@
         profileView.schoolLabel.text = nil;
     }
 }
-
 
 @end
