@@ -36,11 +36,25 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     
-    self.tabBarController = [UITabBarController new];
-    self.tabBarController.viewControllers = @[[MCDiscoverViewController new],
-                                              [MCMatchesViewController new],
-                                              [[UINavigationController alloc]initWithRootViewController:[MCProfileViewController new]]];
+    UINavigationController *profileNavigationController = [[UINavigationController alloc]initWithRootViewController:[MCProfileViewController new]];
+    profileNavigationController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"Profile"
+                                                                          image:[UIImage imageNamed:@"profile"]
+                                                                  selectedImage:[UIImage imageNamed:@"profile-active"]];
     
+    UINavigationController *matchesNavigationController = [[UINavigationController alloc]initWithRootViewController:[MCMatchesViewController new]];
+    matchesNavigationController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"Matches"
+                                                                          image:[UIImage imageNamed:@"matches"]
+                                                                  selectedImage:[UIImage imageNamed:@"matches-active"]];
+    
+    MCDiscoverViewController *discoverViewController = [MCDiscoverViewController new];
+    discoverViewController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"Discover"
+                                                                     image:[UIImage imageNamed:@"discover"]
+                                                             selectedImage:[UIImage imageNamed:@"discover"]];
+    
+    self.tabBarController = [UITabBarController new];
+    self.tabBarController.viewControllers = @[discoverViewController,
+                                              matchesNavigationController,
+                                              profileNavigationController];
     self.tabBarController.selectedIndex = 0;
     
     self.window.rootViewController = self.tabBarController;
