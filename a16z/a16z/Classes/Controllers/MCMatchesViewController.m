@@ -65,7 +65,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     NSData *imageData = [PFUser currentUser][@"image"];
-    UIImageView *backgroundImageView = [[UIImageView alloc]initWithImage:[[UIImage imageWithData:imageData] applyDarkEffect]];
+    UIImageView *backgroundImageView = [[UIImageView alloc]initWithImage:[[UIImage imageWithData:imageData] applyExtraLightEffect]];
     backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
     backgroundImageView.frame = self.view.frame;
     
@@ -110,7 +110,7 @@
             NSMutableArray *matches = [NSMutableArray new];
             
             for (PFObject *match in objects) {
-                if (match[@"matchee"] == [PFUser currentUser]) {
+                if ([((PFUser *)match[@"matchee"]).username isEqualToString:[PFUser currentUser].username]) {
                     [matches addObject:match[@"matcher"]];
                 } else {
                     [matches addObject:match[@"matchee"]];
@@ -127,6 +127,10 @@
     }];
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 
 - (MCMatchProfileTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -137,11 +141,11 @@
             cell = views[0];
             cell.callButton.layer.cornerRadius = 4.0;
             cell.callButton.layer.borderWidth = 1.0;
-            cell.callButton.layer.borderColor = [UIColor yellowColor].CGColor;
+            cell.callButton.layer.borderColor = [UIColor colorWithWhite:0.76/255.0 alpha:1.0].CGColor;
             
             cell.textButton.layer.cornerRadius = 4.0;
             cell.textButton.layer.borderWidth = 1.0;
-            cell.textButton.layer.borderColor = [UIColor yellowColor].CGColor;
+            cell.textButton.layer.borderColor = [UIColor colorWithWhite:0.76/255.0 alpha:1.0].CGColor;
         }
     }
     

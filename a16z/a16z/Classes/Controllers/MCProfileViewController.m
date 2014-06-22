@@ -50,7 +50,7 @@
     [imageViewContainer addSubview:self.imageView];
     self.imageView.center = imageViewContainer.center;
     
-    UIImageView *backgroundImageView = [[UIImageView alloc]initWithImage:[self.imageView.image applyDarkEffect]];
+    UIImageView *backgroundImageView = [[UIImageView alloc]initWithImage:[self.imageView.image applyExtraLightEffect]];
     backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
     backgroundImageView.frame = self.view.frame;
     
@@ -75,8 +75,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProfileTableViewCell"];
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"ProfileTableViewCell"];
-        cell.textLabel.textColor = [UIColor whiteColor];
-        cell.detailTextLabel.textColor = [UIColor lightGrayColor];
+        cell.textLabel.textColor = [UIColor blackColor];
+        cell.detailTextLabel.textColor = [UIColor colorWithWhite:(76.0/255.0) alpha:1.0];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.backgroundColor = [UIColor clearColor];
         
@@ -152,8 +152,8 @@
 {
     return ({
         UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0.0, 0.0, CGRectGetWidth(self.view.bounds), 32.0)];
-        label.textColor = [UIColor whiteColor];
-        label.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.1];
+        label.textColor = [UIColor colorWithWhite:(76.0/255.0) alpha:1.0];
+        label.backgroundColor = [UIColor colorWithWhite:(127.0/255.0) alpha:0.25];
         if (section == 0) {
             label.text = @"   Basic Information";
         }

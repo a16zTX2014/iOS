@@ -57,7 +57,7 @@
     self.currentProfileView = [[MCMatchProfileView alloc]initWithFrame:self.view.frame];
     
     self.acceptView = [[UIView alloc]initWithFrame:self.view.bounds];
-    self.acceptView.backgroundColor = [UIColor greenColor];
+    self.acceptView.backgroundColor = [UIColor colorWithRed:(26.0/255.0) green:(199.0/255.0) blue:(84.0/255.0) alpha:1.0];
     
     self.rejectView = [[UIView alloc]initWithFrame:self.view.bounds];
     self.rejectView.backgroundColor = [UIColor redColor];
@@ -96,12 +96,12 @@
     UILabel *label = (UILabel *)[cell.contentView viewWithTag:1];
     if (!label) {
         label = [[UILabel alloc]initWithFrame:cell.contentView.bounds];
-        label.textColor = [UIColor whiteColor];
+        label.textColor = [UIColor blackColor];
         label.adjustsFontSizeToFitWidth = YES;
         label.lineBreakMode = NSLineBreakByWordWrapping;
         label.textAlignment = NSTextAlignmentCenter;
         label.layer.borderWidth = 1.0;
-        label.layer.borderColor = [UIColor whiteColor].CGColor;
+        label.layer.borderColor = [UIColor blackColor].CGColor;
         label.layer.cornerRadius = 8.0;
         label.numberOfLines = 0;
         label.tag = 1;
@@ -124,11 +124,11 @@
     NSLog(@"yo what is the length of that ish");
     if (collectionView == self.currentProfileView.skillsCollectionView) {
         NSArray *arr = [self.currentMatchUser valueForKey:@"skills"];
-        NSLog(@"Length: %d", arr.count);
+        NSLog(@"Length: %lu", (unsigned long)arr.count);
         return arr.count;
     } else {
         NSArray *arr = [self.nextMatchUser valueForKey:@"skills"];
-        NSLog(@"Length: %d", arr.count);
+        NSLog(@"Length: %lu", (unsigned long)arr.count);
         return arr.count;
     }
 }
@@ -287,7 +287,7 @@
         profileView.imageView.image = [UIImage imageWithData:user[@"image"]];
         profileView.nameLabel.text = user[@"name"];
         profileView.schoolLabel.text = user[@"school"];
-        profileView.backgroundImageView.image = [profileView.imageView.image applyDarkEffect];
+        profileView.backgroundImageView.image = [profileView.imageView.image applyExtraLightEffect];
         [profileView.skillsCollectionView reloadData];
     } else {
         profileView.imageView.image = nil;

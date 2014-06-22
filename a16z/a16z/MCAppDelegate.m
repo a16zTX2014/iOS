@@ -30,6 +30,8 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+    
     // Parse setup
     [Parse setApplicationId:@"OZZ5mGxl3vDzZwzEIeGJ19u0PTg16NE7E7xqQn7C"
                   clientKey:@"59ix5pPVpQkXAPN3jAsHvaWVkwVpGEXSfN2Xohii"];
@@ -66,8 +68,8 @@
     [UITabBar appearance].tintColor = [UIColor orangeColor];
     [UITabBar appearance].barTintColor = [UIColor colorWithWhite:1.0 alpha:0.5];
     
-    
-    
+    [UINavigationBar appearance].barTintColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+    [[UINavigationBar appearance]setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]}];
     
     if (![PFUser currentUser]) {
 

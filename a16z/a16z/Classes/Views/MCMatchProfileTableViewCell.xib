@@ -29,63 +29,50 @@
                             <constraint firstAttribute="height" constant="21" id="4UA-Je-qUw"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
-                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKs-BA-imb">
                         <rect key="frame" x="118" y="46" width="182" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                        <color key="textColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jig-9c-Lni">
-                        <rect key="frame" x="118" y="75" width="64" height="30"/>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jig-9c-Lni">
+                        <rect key="frame" x="118" y="75" width="87" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="64" id="Evq-4R-Nvq"/>
-                            <constraint firstAttribute="height" constant="30" id="tVV-7H-m4L"/>
-                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                         <state key="normal" title="Call">
-                            <color key="titleColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
                             <action selector="callButtonSelected:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xIp-cb-BRL"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0U-I7-qM1">
-                        <rect key="frame" x="236" y="75" width="64" height="30"/>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0U-I7-qM1">
+                        <rect key="frame" x="213" y="75" width="87" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="30" id="Ipf-tE-gXZ"/>
-                            <constraint firstAttribute="width" constant="64" id="dFI-Yl-nut"/>
-                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                         <state key="normal" title="Text">
-                            <color key="titleColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YK-mp-ImX">
                         <rect key="frame" x="248" y="13" width="52" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.10203129053115845" green="0.7810286283493042" blue="0.32893261313438416" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="A0U-I7-qM1" firstAttribute="leading" secondItem="jig-9c-Lni" secondAttribute="trailing" constant="54" id="13z-Jx-Iwz"/>
-                    <constraint firstAttribute="trailing" secondItem="A0U-I7-qM1" secondAttribute="trailing" constant="20" id="1dU-Ra-dML"/>
                     <constraint firstItem="Zf6-fy-W08" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="A2c-FD-zb3"/>
                     <constraint firstAttribute="trailing" secondItem="SN6-kV-AJ4" secondAttribute="trailing" constant="20" id="S6e-Z0-Psr"/>
-                    <constraint firstAttribute="bottom" secondItem="A0U-I7-qM1" secondAttribute="bottom" constant="14" id="UEm-ur-I4v"/>
                     <constraint firstItem="SN6-kV-AJ4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="YwA-St-bI0"/>
-                    <constraint firstItem="A0U-I7-qM1" firstAttribute="leading" secondItem="jig-9c-Lni" secondAttribute="trailing" constant="54" id="awl-iQ-ZCl"/>
-                    <constraint firstAttribute="bottom" secondItem="jig-9c-Lni" secondAttribute="bottom" constant="14" id="cpH-86-r1d"/>
                     <constraint firstItem="Zf6-fy-W08" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="tkg-Aa-574"/>
                 </constraints>
             </tableViewCellContentView>
