@@ -44,6 +44,8 @@
         [PFUser currentUser][@"name"] = textField.text;
     } else if (self.editType == MCProfileEditSchoolType) {
         [PFUser currentUser][@"school"] = textField.text;
+    } else if (self.editType) {
+        [PFUser currentUser][@"phone"] = textField.text;
     }
     
     [self.navigationController popViewControllerAnimated:YES];
@@ -60,8 +62,9 @@
         self.textField.text = [PFUser currentUser][@"name"];
     } else if (self.editType == MCProfileEditSchoolType) {
         self.textField.text = [PFUser currentUser][@"school"];
+    } else if (self.editType == MCProfileEditPhoneType) {
+        self.textField.text = [PFUser currentUser][@"phone"];
     }
-    
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 

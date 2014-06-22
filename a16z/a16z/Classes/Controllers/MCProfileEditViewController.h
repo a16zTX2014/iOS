@@ -17,7 +17,6 @@ typedef NS_ENUM(NSInteger, MCProfileEditType) {
 
 @interface MCProfileEditViewController : UIViewController
 
-
 @property (nonatomic) MCProfileEditType editType;
 
 @end

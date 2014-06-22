@@ -77,15 +77,32 @@
         } else if (indexPath.row == 1) {
             cell.textLabel.text = [PFUser currentUser][@"school"];
             cell.detailTextLabel.text = @"School";
+        } else if (indexPath.row == 2) {
+            cell.textLabel.text = [self formattedPhoneNumberWithString:[PFUser currentUser][@"phone"]];
+            cell.detailTextLabel.text = @"Phone Number";
         }
     }
     
     return cell;
 }
 
+- (NSString *)formattedPhoneNumberWithString:(NSString *)phoneNumber
+{
+    if ([phoneNumber length] == 10) {
+        return [NSString stringWithFormat:@"(%@) %@ - %@",
+                [phoneNumber substringWithRange:NSMakeRange(0, 3)],
+                [phoneNumber substringWithRange:NSMakeRange(3, 3)],
+                [phoneNumber substringWithRange:NSMakeRange(6, 4)]];
+    }
+    return phoneNumber;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    if (section == 0) {
+        return 3;
+    }
+    return 0;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -109,6 +126,8 @@
             self.editViewController.editType = MCProfileEditNameType;
         } else if (indexPath.row == 1) {
             self.editViewController.editType = MCProfileEditSchoolType;
+        } else if (indexPath.row == 2) {
+            self.editViewController.editType = MCProfileEditPhoneType;
         }
     }
     
