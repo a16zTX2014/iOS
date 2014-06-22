@@ -61,13 +61,12 @@
         NSMutableDictionary *newDict = [[MCProfileManager sharedManager].skills mutableCopy];
         newDict[skill] = @(YES);
         [MCProfileManager sharedManager].skills = newDict;
-        
         [self selectButton: button];
+        
     } else if ([[MCProfileManager sharedManager].skills[skill] isEqual: @(YES)]) {
         NSMutableDictionary *newDict = [[MCProfileManager sharedManager].skills mutableCopy];
         newDict[skill] = @(NO);
         [MCProfileManager sharedManager].skills = newDict;
-        
         [self unselectButton:button];
     }
 
@@ -75,20 +74,20 @@
 
 - (void) selectButton:(UIButton *)button
 {
+    button.titleLabel.textColor = self.backgroundColor;
     button.backgroundColor = [UIColor colorWithRed:1
                                              green:1
                                               blue:1
                                              alpha:1.0];
-    button.titleLabel.textColor = self.backgroundColor;
 }
 
 - (void) unselectButton:(UIButton*)button
 {
+    button.titleLabel.textColor = [UIColor whiteColor];
     button.backgroundColor = [UIColor colorWithRed:0
                                              green:0
                                               blue:0
                                              alpha:0];
-    button.titleLabel.textColor = [UIColor whiteColor];
 }
 
 - (void)viewDidLoad
