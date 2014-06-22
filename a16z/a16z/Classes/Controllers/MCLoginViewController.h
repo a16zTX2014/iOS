@@ -16,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UIButton *signinButton;
 @property (weak, nonatomic) IBOutlet UIButton *signupButton;
-@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
+@property (weak, nonatomic) IBOutlet UIView *logoBackgroundImageView;
+
 
 @end
