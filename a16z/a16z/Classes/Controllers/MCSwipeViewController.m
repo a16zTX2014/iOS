@@ -45,11 +45,9 @@
     
     self.acceptView = [[UIView alloc]initWithFrame:self.view.bounds];
     self.acceptView.backgroundColor = [UIColor greenColor];
-//    self.acceptView.alpha = 0.0;
     
     self.rejectView = [[UIView alloc]initWithFrame:self.view.bounds];
     self.rejectView.backgroundColor = [UIColor redColor];
-//    self.rejectView.alpha = 0.0;
     
     [self.view addSubview:self.nextProfileView];
     [self.view addSubview:self.acceptView];
@@ -80,17 +78,28 @@
             self.rejectView.backgroundColor = [UIColor colorWithRed:deltaPercent green:0.0 blue:0.0 alpha:1.0];
             self.acceptView.alpha = 0.0;
         }
-        NSLog(@"%f", deltaPercent);
         
     } else if (gestureRecognizer.state == UIGestureRecognizerStateCancelled ||
-               gestureRecognizer.state == UIGestureRecognizerStateFailed ||
+               gestureRecognizer.state == UIGestureRecognizerStateFailed    ||
                gestureRecognizer.state == UIGestureRecognizerStateEnded) {
         
-//        if (delta.x > 0.3 * CGRectGetWidth(self.view.bounds)) {
-//            // accept
-//        } else if (delta.x < -0.3 * CGRectGetWidth(self.view.bounds)) {
-//            // reject
-//        } else {
+        if (delta.x > 0.3 * CGRectGetWidth(self.view.bounds)) {
+            [UIView animateWithDuration:0.3 animations:^{
+                self.currentProfileView.frame = CGRectOffset(self.view.bounds, CGRectGetWidth(self.view.bounds), 0);
+                self.rejectView.alpha = 0.0;
+                self.acceptView.alpha = 0.0;
+            } completion:^(BOOL finished) {
+                self.currentProfileView.frame = self.view.bounds;
+            }];
+        } else if (delta.x < -0.3 * CGRectGetWidth(self.view.bounds)) {
+            [UIView animateWithDuration:0.3 animations:^{
+                self.currentProfileView.frame = CGRectOffset(self.view.bounds, -CGRectGetWidth(self.view.bounds), 0);
+                self.rejectView.alpha = 0.0;
+                self.acceptView.alpha = 0.0;
+            } completion:^(BOOL finished) {
+                self.currentProfileView.frame = self.view.bounds;
+            }];
+        } else {
         
             [UIView animateWithDuration:0.3 animations:^{
                 self.currentProfileView.frame = self.view.frame;
@@ -98,7 +107,7 @@
                 self.rejectView.alpha = 0.0;
                 self.acceptView.alpha = 0.0;
             }];
-//        }
+        }
     }
 }
 

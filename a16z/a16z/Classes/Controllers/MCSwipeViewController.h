@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 
 
-@class MCMatchProfile;
+@class MCMatchProfileViewModel;
 
 @protocol MCSwipeDataSource <NSObject>
 
-- (MCMatchProfile *)nextMatchProfile;
+- (MCMatchProfileViewModel *)nextMatchProfileViewModel;
 
 @end
 
